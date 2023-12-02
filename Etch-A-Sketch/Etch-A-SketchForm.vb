@@ -190,6 +190,27 @@ Public Class Form1
         Next
     End Sub
 
+    Sub DrawAllWaveForms()
+        'set background color
+        DrawingPictureBox.BackColor = Color.BlanchedAlmond
+        'Draw black graticule
+        penColor = Color.Black
+        DrawGratilules()
+        'return to default pen size
+        penSize = 2
+        'Draw Red Sin Wave
+        penColor = Color.Red
+        DrawSinWave()
+        'Draw Blue Cos Wave
+        penColor = Color.Blue
+        DrawCosWave()
+        'Draw Green Tan Wave 
+        penColor = Color.Green
+        'DrawTanWave() ***doesn't work currently**
+        'Return pen to default color
+        penColor = Color.Black
+    End Sub
+
     ''' <summary>
     ''' Shakes the Picture box up and down **Does Not Currently work**
     ''' </summary>
@@ -203,7 +224,7 @@ Public Class Form1
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub TestButton_Click(sender As Object, e As EventArgs) Handles TestButton.Click
-        DrawGratilules()
+        DrawAllWaveForms()
     End Sub
 
     'Event Handlers
