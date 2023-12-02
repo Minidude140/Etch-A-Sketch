@@ -9,17 +9,18 @@ Option Strict On
 
 
 'TODO
-'[]Figure out custom message box form
 '[~]Figure out middle mouse click
 '[~]Change pen size
-'[]Shake Screen when clear button is clicked
 '[]Create about form
+'[]Shake Screen when clear button is clicked
+'[]Figure out custom message box form
 
 '[]Draw waveforms
 '{~}Sin wave sub (red)
 '{~}Cos wave sub (Blue)
 '{}Tan wave sub (Green)
 '{~}Draw 10x10 Graticule (Black)
+'{}graticule placement kinda funky
 '{~}set default background color and change pen color before drawing each wave type
 
 Public Class Form1
