@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorSelectForm.Designer.vb">
+      <DependentUpon>ColorSelectForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ColorSelectForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Etch-A-SketchForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ColorSelectForm.resx">
+      <DependentUpon>ColorSelectForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Etch-A-SketchForm.resx">
       <DependentUpon>Etch-A-SketchForm.vb</DependentUpon>
     </EmbeddedResource>

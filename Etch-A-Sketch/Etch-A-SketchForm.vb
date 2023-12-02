@@ -84,8 +84,12 @@ Public Class Form1
         '**Need to add shake**
     End Sub
 
-    Private Sub SelectColorButton_Click(sender As Object, e As EventArgs) Handles SelectColorButton.Click
+    Private Sub SelectColorButton_Click(sender As Object, e As EventArgs) Handles SelectColorButton.Click,
+                                                                                  SelectColorContextStripItem.Click,
+                                                                                  SelectColorToolStripMenuItem.Click
         'Need to ask user for pen or background
+        MsgBox()
+        '("Would you like to change the pen or background?",)
     End Sub
 
     Private Sub PenColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PenColorContextStripItem.Click,
