@@ -20,7 +20,7 @@ Option Strict On
 '{~}Cos wave sub (Blue)
 '{}Tan wave sub (Green)
 '{~}Draw 10x10 Graticule (Black)
-'{}set default background color and change pen color before drawing each wave type
+'{~}set default background color and change pen color before drawing each wave type
 
 Public Class Form1
     Dim penColor As Color
@@ -171,22 +171,22 @@ Public Class Form1
         'Draw Vertical Graticule's
         'set starting points 
         oldX = 0
-        oldY = 5
+        oldY = 10
         newY = (DrawingPictureBox.Height - 10)
         'iterate through x
-        For i = 0 To 9
+        For i = 0 To 11
             newX = oldX
             DrawLine(oldX, oldY, newX, newY)
-            oldX = newX + (xMax \ 9)
+            oldX = newX + (xMax \ 10)
         Next
         'Draw Horizontal Graticule's
         oldX = 0
-        oldY = 5
+        oldY = 10
         'iterate through y
-        For i = 0 To 9
+        For i = 0 To 11
             newY = oldY
             DrawLine(oldX, oldY, newX, newY)
-            oldY = newY + (yMax \ 9)
+            oldY = newY + (yMax \ 10)
         Next
     End Sub
 
