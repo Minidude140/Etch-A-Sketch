@@ -104,6 +104,28 @@ Public Class Form1
         Next
     End Sub
 
+    Sub DrawCosWave()
+        'Declare points to draw from and maximum wave size
+        Dim oldX%, oldY%, newX%, newY%
+        Dim yMax As Integer = (DrawingPictureBox.Height \ 2)
+        Dim xMax As Integer = DrawingPictureBox.Width
+        Const pi As Double = System.Math.PI
+        'set start point
+        oldX = 0
+        oldY = CInt((DrawingPictureBox.Height / 2))
+        'iterate(Increment) through the x and calculate y value
+        For i = 0 To xMax Step (xMax / 360)
+            'calculate new points
+            newX = CInt(i * (xMax / 360))
+            newY = CInt(((yMax - 10) * System.Math.Sin(((i * pi) / 180))) + yMax)
+            'drawn calculated points
+            DrawLine(oldX, oldY, newX, newY)
+            'set old points to current point
+            oldX = newX
+            oldY = newY
+        Next
+    End Sub
+
     'Test Button
     ''' <summary>
     ''' DEV Test Button.  (Will be removed at some point)
@@ -111,7 +133,7 @@ Public Class Form1
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub TestButton_Click(sender As Object, e As EventArgs) Handles TestButton.Click
-        DrawSinWave()
+        DrawCosWave()
     End Sub
 
     'Event Handlers
