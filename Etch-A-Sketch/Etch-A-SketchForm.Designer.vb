@@ -62,11 +62,14 @@ Partial Class Form1
         '
         'DrawingPictureBox
         '
+        Me.DrawingPictureBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DrawingPictureBox.BackColor = System.Drawing.Color.BlanchedAlmond
         Me.DrawingPictureBox.ContextMenuStrip = Me.ContextMenuStrip
         Me.DrawingPictureBox.Location = New System.Drawing.Point(11, 42)
         Me.DrawingPictureBox.Name = "DrawingPictureBox"
-        Me.DrawingPictureBox.Size = New System.Drawing.Size(784, 330)
+        Me.DrawingPictureBox.Size = New System.Drawing.Size(777, 330)
         Me.DrawingPictureBox.TabIndex = 0
         Me.DrawingPictureBox.TabStop = False
         Me.ToolTip.SetToolTip(Me.DrawingPictureBox, "Left Click to Draw.  Scroll to Change Pen Size")
@@ -143,6 +146,7 @@ Partial Class Form1
         '
         'ExitButton
         '
+        Me.ExitButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ExitButton.Location = New System.Drawing.Point(531, 16)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(128, 47)
@@ -153,6 +157,7 @@ Partial Class Form1
         '
         'ClearButton
         '
+        Me.ClearButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ClearButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.ClearButton.Location = New System.Drawing.Point(397, 16)
         Me.ClearButton.Name = "ClearButton"
@@ -164,6 +169,7 @@ Partial Class Form1
         '
         'SelectColorButton
         '
+        Me.SelectColorButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.SelectColorButton.Location = New System.Drawing.Point(263, 16)
         Me.SelectColorButton.Name = "SelectColorButton"
         Me.SelectColorButton.Size = New System.Drawing.Size(128, 47)
@@ -174,6 +180,7 @@ Partial Class Form1
         '
         'DrawWaveformsButton
         '
+        Me.DrawWaveformsButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.DrawWaveformsButton.Location = New System.Drawing.Point(129, 16)
         Me.DrawWaveformsButton.Name = "DrawWaveformsButton"
         Me.DrawWaveformsButton.Size = New System.Drawing.Size(128, 47)
@@ -184,6 +191,7 @@ Partial Class Form1
         '
         'TestButton
         '
+        Me.TestButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TestButton.Location = New System.Drawing.Point(24, 27)
         Me.TestButton.Name = "TestButton"
         Me.TestButton.Size = New System.Drawing.Size(46, 24)
@@ -267,14 +275,17 @@ Partial Class Form1
         '
         'ButtonGroupBox
         '
+        Me.ButtonGroupBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonGroupBox.AutoSize = True
         Me.ButtonGroupBox.Controls.Add(Me.TestButton)
         Me.ButtonGroupBox.Controls.Add(Me.DrawWaveformsButton)
         Me.ButtonGroupBox.Controls.Add(Me.SelectColorButton)
         Me.ButtonGroupBox.Controls.Add(Me.ClearButton)
         Me.ButtonGroupBox.Controls.Add(Me.ExitButton)
-        Me.ButtonGroupBox.Location = New System.Drawing.Point(5, 378)
+        Me.ButtonGroupBox.Location = New System.Drawing.Point(11, 369)
         Me.ButtonGroupBox.Name = "ButtonGroupBox"
-        Me.ButtonGroupBox.Size = New System.Drawing.Size(783, 73)
+        Me.ButtonGroupBox.Size = New System.Drawing.Size(777, 82)
         Me.ButtonGroupBox.TabIndex = 6
         Me.ButtonGroupBox.TabStop = False
         '
@@ -289,6 +300,7 @@ Partial Class Form1
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.DrawingPictureBox)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MinimumSize = New System.Drawing.Size(816, 489)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Etch-A-Sketch"
