@@ -69,6 +69,7 @@ Partial Class Form1
         Me.DrawingPictureBox.Size = New System.Drawing.Size(784, 330)
         Me.DrawingPictureBox.TabIndex = 0
         Me.DrawingPictureBox.TabStop = False
+        Me.ToolTip.SetToolTip(Me.DrawingPictureBox, "Left Click to Draw.  Scroll to Change Pen Size")
         '
         'ContextMenuStrip
         '
@@ -100,31 +101,31 @@ Partial Class Form1
         '
         Me.SelectColorContextStripItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PenColorContextStripItem, Me.BackgroundColorContextStripItem})
         Me.SelectColorContextStripItem.Name = "SelectColorContextStripItem"
-        Me.SelectColorContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectColorContextStripItem.Size = New System.Drawing.Size(164, 22)
         Me.SelectColorContextStripItem.Text = "Select Color"
         '
         'PenColorContextStripItem
         '
         Me.PenColorContextStripItem.Name = "PenColorContextStripItem"
-        Me.PenColorContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.PenColorContextStripItem.Size = New System.Drawing.Size(170, 22)
         Me.PenColorContextStripItem.Text = "Pen Color"
         '
         'BackgroundColorContextStripItem
         '
         Me.BackgroundColorContextStripItem.Name = "BackgroundColorContextStripItem"
-        Me.BackgroundColorContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.BackgroundColorContextStripItem.Size = New System.Drawing.Size(170, 22)
         Me.BackgroundColorContextStripItem.Text = "Background Color"
         '
         'DrawWaveformsContextStripItem
         '
         Me.DrawWaveformsContextStripItem.Name = "DrawWaveformsContextStripItem"
-        Me.DrawWaveformsContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.DrawWaveformsContextStripItem.Size = New System.Drawing.Size(164, 22)
         Me.DrawWaveformsContextStripItem.Text = "Draw Waveforms"
         '
         'ClearContextStripItem
         '
         Me.ClearContextStripItem.Name = "ClearContextStripItem"
-        Me.ClearContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearContextStripItem.Size = New System.Drawing.Size(164, 22)
         Me.ClearContextStripItem.Text = "Clear"
         '
         'HelpContextStripItem

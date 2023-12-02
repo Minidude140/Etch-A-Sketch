@@ -112,7 +112,6 @@ Public Class Form1
         SelectColorDialog.ShowDialog()
         'Set Pen Color to Chosen Dialog Option
         ChangeColor(SelectColorDialog.Color)
-        '**Need to add middle mouse button**
     End Sub
 
     Private Sub BackgroundColorContextStripItem_Click(sender As Object, e As EventArgs) Handles BackgroundColorContextStripItem.Click,
@@ -128,9 +127,18 @@ Public Class Form1
         Static oldX As Integer
         Static oldY As Integer
         Select Case True
+            'if left mouse button is clicked draw line
             Case e.Button = MouseButtons.Left
+                'draw line from old mouse point to current mouse point
                 DrawLine(oldX, oldY, e.X, e.Y)
+                'if middle mouse button is clicked select pen color
+            Case e.Button = MouseButtons.Middle
+                'Change the color of the pen
+                SelectColorDialog.ShowDialog()
+                'Set Pen Color to Chosen Dialog Option
+                ChangeColor(SelectColorDialog.Color)
         End Select
+        'update old mouse points with current
         oldX = e.X
         oldY = e.Y
     End Sub
@@ -144,4 +152,5 @@ Public Class Form1
             penSize -= 1
         End If
     End Sub
+
 End Class
