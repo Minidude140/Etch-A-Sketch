@@ -19,7 +19,7 @@ Option Strict On
 '{~}Sin wave sub (red)
 '{~}Cos wave sub (Blue)
 '{}Tan wave sub (Green)
-'{}Draw 10x10 Graticule (Black)
+'{~}Draw 10x10 Graticule (Black)
 '{}set default background color and change pen color before drawing each wave type
 
 Public Class Form1
@@ -160,12 +160,42 @@ Public Class Form1
     'Test Button
 
     ''' <summary>
+    ''' Draw a 10x10 Graticule across the picture box
+    ''' </summary>
+    Sub DrawGratilules()
+        'Set pen size
+        Me.penSize = 1
+        Dim oldX%, oldY%, newX%, newY%
+        Dim xMax As Integer = DrawingPictureBox.Width
+        Dim yMax As Integer = (DrawingPictureBox.Height - 10)
+        'Draw Vertical Graticule's
+        'set starting points 
+        oldX = 0
+        oldY = 5
+        newY = (DrawingPictureBox.Height - 10)
+        'iterate through x
+        For i = 0 To 9
+            newX = oldX
+            DrawLine(oldX, oldY, newX, newY)
+            oldX = newX + (xMax \ 9)
+        Next
+        'Draw Horizontal Graticule's
+        oldX = 0
+        oldY = 5
+        'iterate through y
+        For i = 0 To 9
+            newY = oldY
+            DrawLine(oldX, oldY, newX, newY)
+            oldY = newY + (yMax \ 9)
+        Next
+    End Sub
+
+    ''' <summary>
     ''' Shakes the Picture box up and down **Does Not Currently work**
     ''' </summary>
     Sub ShakeScreen()
 
     End Sub
-
 
     ''' <summary>
     ''' DEV Test Button.  (Will be removed at some point)
@@ -173,7 +203,7 @@ Public Class Form1
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub TestButton_Click(sender As Object, e As EventArgs) Handles TestButton.Click
-
+        DrawGratilules()
     End Sub
 
     'Event Handlers
