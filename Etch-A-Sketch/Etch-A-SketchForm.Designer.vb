@@ -47,9 +47,11 @@ Partial Class Form1
         Me.ClearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ButtonGroupBox = New System.Windows.Forms.GroupBox()
         CType(Me.DrawingPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
+        Me.ButtonGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'DrawingPictureBox
@@ -64,7 +66,7 @@ Partial Class Form1
         '
         'ExitButton
         '
-        Me.ExitButton.Location = New System.Drawing.Point(535, 391)
+        Me.ExitButton.Location = New System.Drawing.Point(520, 7)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(128, 47)
         Me.ExitButton.TabIndex = 3
@@ -74,7 +76,8 @@ Partial Class Form1
         '
         'ClearButton
         '
-        Me.ClearButton.Location = New System.Drawing.Point(401, 391)
+        Me.ClearButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.ClearButton.Location = New System.Drawing.Point(386, 7)
         Me.ClearButton.Name = "ClearButton"
         Me.ClearButton.Size = New System.Drawing.Size(128, 47)
         Me.ClearButton.TabIndex = 2
@@ -84,7 +87,7 @@ Partial Class Form1
         '
         'SelectColorButton
         '
-        Me.SelectColorButton.Location = New System.Drawing.Point(267, 391)
+        Me.SelectColorButton.Location = New System.Drawing.Point(252, 7)
         Me.SelectColorButton.Name = "SelectColorButton"
         Me.SelectColorButton.Size = New System.Drawing.Size(128, 47)
         Me.SelectColorButton.TabIndex = 1
@@ -94,7 +97,7 @@ Partial Class Form1
         '
         'DrawWaveformsButton
         '
-        Me.DrawWaveformsButton.Location = New System.Drawing.Point(133, 391)
+        Me.DrawWaveformsButton.Location = New System.Drawing.Point(118, 7)
         Me.DrawWaveformsButton.Name = "DrawWaveformsButton"
         Me.DrawWaveformsButton.Size = New System.Drawing.Size(128, 47)
         Me.DrawWaveformsButton.TabIndex = 0
@@ -219,6 +222,18 @@ Partial Class Form1
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
+        'ButtonGroupBox
+        '
+        Me.ButtonGroupBox.Controls.Add(Me.DrawWaveformsButton)
+        Me.ButtonGroupBox.Controls.Add(Me.SelectColorButton)
+        Me.ButtonGroupBox.Controls.Add(Me.ClearButton)
+        Me.ButtonGroupBox.Controls.Add(Me.ExitButton)
+        Me.ButtonGroupBox.Location = New System.Drawing.Point(11, 384)
+        Me.ButtonGroupBox.Name = "ButtonGroupBox"
+        Me.ButtonGroupBox.Size = New System.Drawing.Size(783, 65)
+        Me.ButtonGroupBox.TabIndex = 6
+        Me.ButtonGroupBox.TabStop = False
+        '
         'Form1
         '
         Me.AcceptButton = Me.DrawWaveformsButton
@@ -226,11 +241,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.ClearButton
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ButtonGroupBox)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.DrawWaveformsButton)
-        Me.Controls.Add(Me.SelectColorButton)
-        Me.Controls.Add(Me.ClearButton)
-        Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.DrawingPictureBox)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
@@ -239,6 +251,7 @@ Partial Class Form1
         Me.ContextMenuStrip.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.ButtonGroupBox.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -268,4 +281,5 @@ Partial Class Form1
     Friend WithEvents ClearToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ButtonGroupBox As GroupBox
 End Class
