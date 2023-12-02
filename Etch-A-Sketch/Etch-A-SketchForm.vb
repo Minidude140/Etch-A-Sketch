@@ -55,6 +55,6 @@ Public Class Form1
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub TestButton_Click(sender As Object, e As EventArgs) Handles TestButton.Click
-
+        DrawLine(0, 0, (DrawingPictureBox.Width - 10), (DrawingPictureBox.Height - 10))
     End Sub
 End Class

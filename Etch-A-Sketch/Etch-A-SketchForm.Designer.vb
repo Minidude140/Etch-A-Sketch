@@ -127,7 +127,7 @@ Partial Class Form1
         Me.ExitButton.Location = New System.Drawing.Point(531, 16)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(128, 47)
-        Me.ExitButton.TabIndex = 3
+        Me.ExitButton.TabIndex = 4
         Me.ExitButton.Text = "E&xit"
         Me.ToolTip.SetToolTip(Me.ExitButton, "Exit Program")
         Me.ExitButton.UseVisualStyleBackColor = True
@@ -138,7 +138,7 @@ Partial Class Form1
         Me.ClearButton.Location = New System.Drawing.Point(397, 16)
         Me.ClearButton.Name = "ClearButton"
         Me.ClearButton.Size = New System.Drawing.Size(128, 47)
-        Me.ClearButton.TabIndex = 2
+        Me.ClearButton.TabIndex = 3
         Me.ClearButton.Text = "&Clear"
         Me.ToolTip.SetToolTip(Me.ClearButton, "Clear Drawing")
         Me.ClearButton.UseVisualStyleBackColor = True
@@ -148,7 +148,7 @@ Partial Class Form1
         Me.SelectColorButton.Location = New System.Drawing.Point(263, 16)
         Me.SelectColorButton.Name = "SelectColorButton"
         Me.SelectColorButton.Size = New System.Drawing.Size(128, 47)
-        Me.SelectColorButton.TabIndex = 1
+        Me.SelectColorButton.TabIndex = 2
         Me.SelectColorButton.Text = "&Select Color"
         Me.ToolTip.SetToolTip(Me.SelectColorButton, "Select Pen Color")
         Me.SelectColorButton.UseVisualStyleBackColor = True
@@ -158,7 +158,7 @@ Partial Class Form1
         Me.DrawWaveformsButton.Location = New System.Drawing.Point(129, 16)
         Me.DrawWaveformsButton.Name = "DrawWaveformsButton"
         Me.DrawWaveformsButton.Size = New System.Drawing.Size(128, 47)
-        Me.DrawWaveformsButton.TabIndex = 0
+        Me.DrawWaveformsButton.TabIndex = 1
         Me.DrawWaveformsButton.Text = "&Draw Waveforms"
         Me.ToolTip.SetToolTip(Me.DrawWaveformsButton, "Draws a Sin, Cos, and Tan Waveform")
         Me.DrawWaveformsButton.UseVisualStyleBackColor = True
@@ -241,7 +241,7 @@ Partial Class Form1
         Me.TestButton.Location = New System.Drawing.Point(24, 27)
         Me.TestButton.Name = "TestButton"
         Me.TestButton.Size = New System.Drawing.Size(46, 24)
-        Me.TestButton.TabIndex = 4
+        Me.TestButton.TabIndex = 0
         Me.TestButton.Text = "Test"
         Me.ToolTip.SetToolTip(Me.TestButton, "Button Used For Dev Testing")
         Me.TestButton.UseVisualStyleBackColor = True
