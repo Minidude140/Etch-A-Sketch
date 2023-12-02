@@ -10,8 +10,17 @@ Option Strict On
 
 'TODO
 '[]Figure out custom message box form
-'[]Figure out middle mouse click
+'[~]Figure out middle mouse click
 '[~]Change pen size
+'[]Shake Screen when clear button is clicked
+'[]Create about form
+
+'[]Draw waveforms
+'{}Sin wave sub (red)
+'{}Cos wave sub (Blue)
+'{}Tan wave sub (Green)
+'{}Draw 10x10 Graticule (Black)
+'{}set default background color and change pen color before drawing each wave type
 
 Public Class Form1
     Dim penColor As Color
