@@ -16,8 +16,8 @@ Option Strict On
 '[]Create about form
 
 '[]Draw waveforms
-'{}Sin wave sub (red)
-'{}Cos wave sub (Blue)
+'{~}Sin wave sub (red)
+'{~}Cos wave sub (Blue)
 '{}Tan wave sub (Green)
 '{}Draw 10x10 Graticule (Black)
 '{}set default background color and change pen color before drawing each wave type
@@ -104,6 +104,9 @@ Public Class Form1
         Next
     End Sub
 
+    ''' <summary>
+    ''' Draws a Cos Wave Across the Picture Box
+    ''' </summary>
     Sub DrawCosWave()
         'Declare points to draw from and maximum wave size
         Dim oldX%, oldY%, newX%, newY%
