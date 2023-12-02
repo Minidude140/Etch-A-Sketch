@@ -67,7 +67,7 @@ Partial Class Form1
         Me.ExitButton.Location = New System.Drawing.Point(535, 391)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(128, 47)
-        Me.ExitButton.TabIndex = 1
+        Me.ExitButton.TabIndex = 3
         Me.ExitButton.Text = "E&xit"
         Me.ToolTip.SetToolTip(Me.ExitButton, "Exit Program")
         Me.ExitButton.UseVisualStyleBackColor = True
@@ -87,7 +87,7 @@ Partial Class Form1
         Me.SelectColorButton.Location = New System.Drawing.Point(267, 391)
         Me.SelectColorButton.Name = "SelectColorButton"
         Me.SelectColorButton.Size = New System.Drawing.Size(128, 47)
-        Me.SelectColorButton.TabIndex = 3
+        Me.SelectColorButton.TabIndex = 1
         Me.SelectColorButton.Text = "&Select Color"
         Me.ToolTip.SetToolTip(Me.SelectColorButton, "Select Pen Color")
         Me.SelectColorButton.UseVisualStyleBackColor = True
@@ -97,7 +97,7 @@ Partial Class Form1
         Me.DrawWaveformsButton.Location = New System.Drawing.Point(133, 391)
         Me.DrawWaveformsButton.Name = "DrawWaveformsButton"
         Me.DrawWaveformsButton.Size = New System.Drawing.Size(128, 47)
-        Me.DrawWaveformsButton.TabIndex = 4
+        Me.DrawWaveformsButton.TabIndex = 0
         Me.DrawWaveformsButton.Text = "&Draw Waveforms"
         Me.ToolTip.SetToolTip(Me.DrawWaveformsButton, "Draws a Sin, Cos, and Tan Waveform")
         Me.DrawWaveformsButton.UseVisualStyleBackColor = True
