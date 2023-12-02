@@ -37,6 +37,7 @@ Partial Class Form1
         Me.ClearContextStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpContextStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutContextStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.DrawingPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -58,6 +59,7 @@ Partial Class Form1
         Me.ExitButton.Size = New System.Drawing.Size(128, 47)
         Me.ExitButton.TabIndex = 1
         Me.ExitButton.Text = "E&xit"
+        Me.ToolTip.SetToolTip(Me.ExitButton, "Exit Program")
         Me.ExitButton.UseVisualStyleBackColor = True
         '
         'ClearButton
@@ -67,6 +69,7 @@ Partial Class Form1
         Me.ClearButton.Size = New System.Drawing.Size(128, 47)
         Me.ClearButton.TabIndex = 2
         Me.ClearButton.Text = "&Clear"
+        Me.ToolTip.SetToolTip(Me.ClearButton, "Clear Drawing")
         Me.ClearButton.UseVisualStyleBackColor = True
         '
         'SelectColorButton
@@ -76,6 +79,7 @@ Partial Class Form1
         Me.SelectColorButton.Size = New System.Drawing.Size(128, 47)
         Me.SelectColorButton.TabIndex = 3
         Me.SelectColorButton.Text = "&Select Color"
+        Me.ToolTip.SetToolTip(Me.SelectColorButton, "Select Pen Color")
         Me.SelectColorButton.UseVisualStyleBackColor = True
         '
         'DrawWaveformsButton
@@ -85,6 +89,7 @@ Partial Class Form1
         Me.DrawWaveformsButton.Size = New System.Drawing.Size(128, 47)
         Me.DrawWaveformsButton.TabIndex = 4
         Me.DrawWaveformsButton.Text = "&Draw Waveforms"
+        Me.ToolTip.SetToolTip(Me.DrawWaveformsButton, "Draws a Sin, Cos, and Tan Waveform")
         Me.DrawWaveformsButton.UseVisualStyleBackColor = True
         '
         'ContextMenuStrip
@@ -97,7 +102,7 @@ Partial Class Form1
         '
         Me.FileContextStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitContextStripMenuItem})
         Me.FileContextStripMenuItem.Name = "FileContextStripMenuItem"
-        Me.FileContextStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FileContextStripMenuItem.Size = New System.Drawing.Size(99, 22)
         Me.FileContextStripMenuItem.Text = "File"
         '
         'ExitContextStripMenuItem
@@ -110,7 +115,7 @@ Partial Class Form1
         '
         Me.EditContextStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectColorContextStripMenuItem, Me.DrawWaveformsContextStripMenuItem, Me.ClearContextStripMenuItem})
         Me.EditContextStripMenuItem1.Name = "EditContextStripMenuItem1"
-        Me.EditContextStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.EditContextStripMenuItem1.Size = New System.Drawing.Size(99, 22)
         Me.EditContextStripMenuItem1.Text = "Edit"
         '
         'SelectColorContextStripMenuItem
@@ -176,4 +181,5 @@ Partial Class Form1
     Friend WithEvents ClearContextStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpContextStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutContextStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ToolTip As ToolTip
 End Class
