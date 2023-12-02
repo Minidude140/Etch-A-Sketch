@@ -50,6 +50,10 @@ Partial Class Form1
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ButtonGroupBox = New System.Windows.Forms.GroupBox()
         Me.SelectColorDialog = New System.Windows.Forms.ColorDialog()
+        Me.PenColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BackgroundColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PenColorContextStripItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BackgroundColorContextStripItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DrawingPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -94,20 +98,21 @@ Partial Class Form1
         '
         'SelectColorContextStripItem
         '
+        Me.SelectColorContextStripItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PenColorContextStripItem, Me.BackgroundColorContextStripItem})
         Me.SelectColorContextStripItem.Name = "SelectColorContextStripItem"
-        Me.SelectColorContextStripItem.Size = New System.Drawing.Size(164, 22)
+        Me.SelectColorContextStripItem.Size = New System.Drawing.Size(180, 22)
         Me.SelectColorContextStripItem.Text = "Select Color"
         '
         'DrawWaveformsContextStripItem
         '
         Me.DrawWaveformsContextStripItem.Name = "DrawWaveformsContextStripItem"
-        Me.DrawWaveformsContextStripItem.Size = New System.Drawing.Size(164, 22)
+        Me.DrawWaveformsContextStripItem.Size = New System.Drawing.Size(180, 22)
         Me.DrawWaveformsContextStripItem.Text = "Draw Waveforms"
         '
         'ClearContextStripItem
         '
         Me.ClearContextStripItem.Name = "ClearContextStripItem"
-        Me.ClearContextStripItem.Size = New System.Drawing.Size(164, 22)
+        Me.ClearContextStripItem.Size = New System.Drawing.Size(180, 22)
         Me.ClearContextStripItem.Text = "Clear"
         '
         'HelpContextStripItem
@@ -205,20 +210,21 @@ Partial Class Form1
         '
         'SelectColorToolStripMenuItem
         '
+        Me.SelectColorToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PenColorToolStripMenuItem, Me.BackgroundColorToolStripMenuItem})
         Me.SelectColorToolStripMenuItem.Name = "SelectColorToolStripMenuItem"
-        Me.SelectColorToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.SelectColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SelectColorToolStripMenuItem.Text = "Select Color"
         '
         'DrawWaveformsToolStripMenuItem
         '
         Me.DrawWaveformsToolStripMenuItem.Name = "DrawWaveformsToolStripMenuItem"
-        Me.DrawWaveformsToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.DrawWaveformsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DrawWaveformsToolStripMenuItem.Text = "Draw Waveforms"
         '
         'ClearToolStripMenuItem
         '
         Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
-        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClearToolStripMenuItem.Text = "Clear"
         '
         'HelpToolStripMenuItem
@@ -246,6 +252,30 @@ Partial Class Form1
         Me.ButtonGroupBox.Size = New System.Drawing.Size(783, 73)
         Me.ButtonGroupBox.TabIndex = 6
         Me.ButtonGroupBox.TabStop = False
+        '
+        'PenColorToolStripMenuItem
+        '
+        Me.PenColorToolStripMenuItem.Name = "PenColorToolStripMenuItem"
+        Me.PenColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PenColorToolStripMenuItem.Text = "Pen Color"
+        '
+        'BackgroundColorToolStripMenuItem
+        '
+        Me.BackgroundColorToolStripMenuItem.Name = "BackgroundColorToolStripMenuItem"
+        Me.BackgroundColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BackgroundColorToolStripMenuItem.Text = "Background Color"
+        '
+        'PenColorContextStripItem
+        '
+        Me.PenColorContextStripItem.Name = "PenColorContextStripItem"
+        Me.PenColorContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.PenColorContextStripItem.Text = "Pen Color"
+        '
+        'BackgroundColorContextStripItem
+        '
+        Me.BackgroundColorContextStripItem.Name = "BackgroundColorContextStripItem"
+        Me.BackgroundColorContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.BackgroundColorContextStripItem.Text = "Background Color"
         '
         'Form1
         '
@@ -297,4 +327,8 @@ Partial Class Form1
     Friend WithEvents ButtonGroupBox As GroupBox
     Friend WithEvents TestButton As Button
     Friend WithEvents SelectColorDialog As ColorDialog
+    Friend WithEvents PenColorContextStripItem As ToolStripMenuItem
+    Friend WithEvents BackgroundColorContextStripItem As ToolStripMenuItem
+    Friend WithEvents PenColorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BackgroundColorToolStripMenuItem As ToolStripMenuItem
 End Class
