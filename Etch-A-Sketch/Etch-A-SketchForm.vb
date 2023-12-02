@@ -114,4 +114,15 @@ Public Class Form1
         ChangeColor(SelectColorDialog.Color, False)
     End Sub
 
+    Private Sub DrawingPictureBox_MouseMove(sender As Object, e As MouseEventArgs) Handles DrawingPictureBox.MouseMove,
+                                                                                           DrawingPictureBox.MouseDown
+        Static oldX As Integer
+        Static oldY As Integer
+        Select Case True
+            Case e.Button = MouseButtons.Left
+                DrawLine(oldX, oldY, e.X, e.Y)
+        End Select
+        oldX = e.X
+        oldY = e.Y
+    End Sub
 End Class
