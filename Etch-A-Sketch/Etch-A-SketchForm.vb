@@ -112,12 +112,12 @@ Public Class Form1
         Const pi As Double = System.Math.PI
         'set start point
         oldX = 0
-        oldY = CInt((DrawingPictureBox.Height / 2))
+        oldY = 10
         'iterate(Increment) through the x and calculate y value
         For i = 0 To xMax Step (xMax / 360)
             'calculate new points
             newX = CInt(i * (xMax / 360))
-            newY = CInt(((yMax - 10) * System.Math.Sin(((i * pi) / 180))) + yMax)
+            newY = CInt(((yMax - 10) * System.Math.Sin(((i * pi) / 180) - (pi / 2))) + yMax)
             'drawn calculated points
             DrawLine(oldX, oldY, newX, newY)
             'set old points to current point
