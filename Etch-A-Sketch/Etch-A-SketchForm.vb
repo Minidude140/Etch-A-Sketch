@@ -9,6 +9,7 @@ Option Strict On
 
 Public Class Form1
     Dim penColor As Color
+    Dim backgroundColor As Color
 
     'Custom Methods
     ''' <summary>
@@ -17,7 +18,8 @@ Public Class Form1
     Sub SetDefaults()
         DrawingPictureBox.Refresh()
         Me.penColor = Color.Black
-        DrawingPictureBox.BackColor = Color.BlanchedAlmond
+        Me.backgroundColor = Color.BlanchedAlmond
+        DrawingPictureBox.BackColor = Me.backgroundColor
     End Sub
 
     ''' <summary>
@@ -39,8 +41,19 @@ Public Class Form1
         g.Dispose()
     End Sub
 
-    Sub ChangeColor(newColor As Color)
-        penColor = newColor
+    ''' <summary>
+    ''' Change Color of the pen by default.
+    ''' Optional Change background color(set second parameter false)
+    ''' </summary>
+    ''' <param name="newColor"></param>
+    ''' <param name="changePenColor"></param>
+    Sub ChangeColor(newColor As Color, Optional changePenColor As Boolean = True)
+        If changePenColor = True Then
+            penColor = newColor
+        Else
+            backgroundColor = newColor
+            DrawingPictureBox.BackColor = newColor
+        End If
     End Sub
 
     'Test Button
@@ -71,12 +84,24 @@ Public Class Form1
         '**Need to add shake**
     End Sub
 
-    Private Sub SelectColorButton_Click(sender As Object, e As EventArgs) Handles SelectColorButton.Click,
-                                                                                  SelectColorContextStripItem.Click,
-                                                                                  SelectColorToolStripMenuItem.Click
-        'Change the color of the pen here
+    Private Sub SelectColorButton_Click(sender As Object, e As EventArgs) Handles SelectColorButton.Click
+        'Need to ask user for pen or background
+    End Sub
+
+    Private Sub PenColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PenColorContextStripItem.Click,
+                                                                                          PenColorToolStripMenuItem.Click
+        'Change the color of the pen
         SelectColorDialog.ShowDialog()
+        'Set Pen Color to Chosen Dialog Option
         ChangeColor(SelectColorDialog.Color)
         '**Need to add middle mouse button**
+    End Sub
+
+    Private Sub BackgroundColorContextStripItem_Click(sender As Object, e As EventArgs) Handles BackgroundColorContextStripItem.Click,
+                                                                                                BackgroundColorToolStripMenuItem.Click
+        'Change the color of the background here
+        SelectColorDialog.ShowDialog()
+        'Set Background Color to Chosen Dialog Option
+        ChangeColor(SelectColorDialog.Color, False)
     End Sub
 End Class
