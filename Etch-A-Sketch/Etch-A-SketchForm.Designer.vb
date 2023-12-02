@@ -25,19 +25,20 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.DrawingPictureBox = New System.Windows.Forms.PictureBox()
         Me.ContextMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.FileContextStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitContextStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditContextStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SelectColorContextStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DrawWaveformsContextStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClearContextStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpContextStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutContextStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FileContextStripItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitContextStripItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditContextStripItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SelectColorContextStripItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DrawWaveformsContextStripItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClearContextStripItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpContextStripItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutContextStripItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.SelectColorButton = New System.Windows.Forms.Button()
         Me.DrawWaveformsButton = New System.Windows.Forms.Button()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.TestButton = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -48,7 +49,6 @@ Partial Class Form1
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ButtonGroupBox = New System.Windows.Forms.GroupBox()
-        Me.TestButton = New System.Windows.Forms.Button()
         CType(Me.DrawingPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -67,60 +67,60 @@ Partial Class Form1
         '
         'ContextMenuStrip
         '
-        Me.ContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileContextStripMenuItem, Me.EditContextStripMenuItem1, Me.HelpContextStripMenuItem})
+        Me.ContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileContextStripItem, Me.EditContextStripItem, Me.HelpContextStripItem})
         Me.ContextMenuStrip.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip.Size = New System.Drawing.Size(100, 70)
         '
-        'FileContextStripMenuItem
+        'FileContextStripItem
         '
-        Me.FileContextStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitContextStripMenuItem})
-        Me.FileContextStripMenuItem.Name = "FileContextStripMenuItem"
-        Me.FileContextStripMenuItem.Size = New System.Drawing.Size(99, 22)
-        Me.FileContextStripMenuItem.Text = "File"
+        Me.FileContextStripItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitContextStripItem})
+        Me.FileContextStripItem.Name = "FileContextStripItem"
+        Me.FileContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.FileContextStripItem.Text = "File"
         '
-        'ExitContextStripMenuItem
+        'ExitContextStripItem
         '
-        Me.ExitContextStripMenuItem.Name = "ExitContextStripMenuItem"
-        Me.ExitContextStripMenuItem.Size = New System.Drawing.Size(93, 22)
-        Me.ExitContextStripMenuItem.Text = "Exit"
+        Me.ExitContextStripItem.Name = "ExitContextStripItem"
+        Me.ExitContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitContextStripItem.Text = "Exit"
         '
-        'EditContextStripMenuItem1
+        'EditContextStripItem
         '
-        Me.EditContextStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectColorContextStripMenuItem, Me.DrawWaveformsContextStripMenuItem, Me.ClearContextStripMenuItem})
-        Me.EditContextStripMenuItem1.Name = "EditContextStripMenuItem1"
-        Me.EditContextStripMenuItem1.Size = New System.Drawing.Size(99, 22)
-        Me.EditContextStripMenuItem1.Text = "Edit"
+        Me.EditContextStripItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectColorContextStripItem, Me.DrawWaveformsContextStripItem, Me.ClearContextStripItem})
+        Me.EditContextStripItem.Name = "EditContextStripItem"
+        Me.EditContextStripItem.Size = New System.Drawing.Size(99, 22)
+        Me.EditContextStripItem.Text = "Edit"
         '
-        'SelectColorContextStripMenuItem
+        'SelectColorContextStripItem
         '
-        Me.SelectColorContextStripMenuItem.Name = "SelectColorContextStripMenuItem"
-        Me.SelectColorContextStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.SelectColorContextStripMenuItem.Text = "Select Color"
+        Me.SelectColorContextStripItem.Name = "SelectColorContextStripItem"
+        Me.SelectColorContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectColorContextStripItem.Text = "Select Color"
         '
-        'DrawWaveformsContextStripMenuItem
+        'DrawWaveformsContextStripItem
         '
-        Me.DrawWaveformsContextStripMenuItem.Name = "DrawWaveformsContextStripMenuItem"
-        Me.DrawWaveformsContextStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.DrawWaveformsContextStripMenuItem.Text = "Draw Waveforms"
+        Me.DrawWaveformsContextStripItem.Name = "DrawWaveformsContextStripItem"
+        Me.DrawWaveformsContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.DrawWaveformsContextStripItem.Text = "Draw Waveforms"
         '
-        'ClearContextStripMenuItem
+        'ClearContextStripItem
         '
-        Me.ClearContextStripMenuItem.Name = "ClearContextStripMenuItem"
-        Me.ClearContextStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.ClearContextStripMenuItem.Text = "Clear"
+        Me.ClearContextStripItem.Name = "ClearContextStripItem"
+        Me.ClearContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearContextStripItem.Text = "Clear"
         '
-        'HelpContextStripMenuItem
+        'HelpContextStripItem
         '
-        Me.HelpContextStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutContextStripMenuItem1})
-        Me.HelpContextStripMenuItem.Name = "HelpContextStripMenuItem"
-        Me.HelpContextStripMenuItem.Size = New System.Drawing.Size(99, 22)
-        Me.HelpContextStripMenuItem.Text = "Help"
+        Me.HelpContextStripItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutContextStripItem})
+        Me.HelpContextStripItem.Name = "HelpContextStripItem"
+        Me.HelpContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.HelpContextStripItem.Text = "Help"
         '
-        'AboutContextStripMenuItem1
+        'AboutContextStripItem
         '
-        Me.AboutContextStripMenuItem1.Name = "AboutContextStripMenuItem1"
-        Me.AboutContextStripMenuItem1.Size = New System.Drawing.Size(107, 22)
-        Me.AboutContextStripMenuItem1.Text = "About"
+        Me.AboutContextStripItem.Name = "AboutContextStripItem"
+        Me.AboutContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutContextStripItem.Text = "About"
         '
         'ExitButton
         '
@@ -163,6 +163,16 @@ Partial Class Form1
         Me.ToolTip.SetToolTip(Me.DrawWaveformsButton, "Draws a Sin, Cos, and Tan Waveform")
         Me.DrawWaveformsButton.UseVisualStyleBackColor = True
         '
+        'TestButton
+        '
+        Me.TestButton.Location = New System.Drawing.Point(24, 27)
+        Me.TestButton.Name = "TestButton"
+        Me.TestButton.Size = New System.Drawing.Size(46, 24)
+        Me.TestButton.TabIndex = 0
+        Me.TestButton.Text = "Test"
+        Me.ToolTip.SetToolTip(Me.TestButton, "Button Used For Dev Testing")
+        Me.TestButton.UseVisualStyleBackColor = True
+        '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.HelpToolStripMenuItem})
@@ -182,7 +192,7 @@ Partial Class Form1
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(93, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'EditToolStripMenuItem
@@ -195,19 +205,19 @@ Partial Class Form1
         'SelectColorToolStripMenuItem
         '
         Me.SelectColorToolStripMenuItem.Name = "SelectColorToolStripMenuItem"
-        Me.SelectColorToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.SelectColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SelectColorToolStripMenuItem.Text = "Select Color"
         '
         'DrawWaveformsToolStripMenuItem
         '
         Me.DrawWaveformsToolStripMenuItem.Name = "DrawWaveformsToolStripMenuItem"
-        Me.DrawWaveformsToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.DrawWaveformsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DrawWaveformsToolStripMenuItem.Text = "Draw Waveforms"
         '
         'ClearToolStripMenuItem
         '
         Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
-        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClearToolStripMenuItem.Text = "Clear"
         '
         'HelpToolStripMenuItem
@@ -235,16 +245,6 @@ Partial Class Form1
         Me.ButtonGroupBox.Size = New System.Drawing.Size(783, 73)
         Me.ButtonGroupBox.TabIndex = 6
         Me.ButtonGroupBox.TabStop = False
-        '
-        'TestButton
-        '
-        Me.TestButton.Location = New System.Drawing.Point(24, 27)
-        Me.TestButton.Name = "TestButton"
-        Me.TestButton.Size = New System.Drawing.Size(46, 24)
-        Me.TestButton.TabIndex = 0
-        Me.TestButton.Text = "Test"
-        Me.ToolTip.SetToolTip(Me.TestButton, "Button Used For Dev Testing")
-        Me.TestButton.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -275,14 +275,14 @@ Partial Class Form1
     Friend WithEvents SelectColorButton As Button
     Friend WithEvents DrawWaveformsButton As Button
     Friend WithEvents ContextMenuStrip As ContextMenuStrip
-    Friend WithEvents FileContextStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ExitContextStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EditContextStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents SelectColorContextStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DrawWaveformsContextStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ClearContextStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HelpContextStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AboutContextStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents FileContextStripItem As ToolStripMenuItem
+    Friend WithEvents ExitContextStripItem As ToolStripMenuItem
+    Friend WithEvents EditContextStripItem As ToolStripMenuItem
+    Friend WithEvents SelectColorContextStripItem As ToolStripMenuItem
+    Friend WithEvents DrawWaveformsContextStripItem As ToolStripMenuItem
+    Friend WithEvents ClearContextStripItem As ToolStripMenuItem
+    Friend WithEvents HelpContextStripItem As ToolStripMenuItem
+    Friend WithEvents AboutContextStripItem As ToolStripMenuItem
     Friend WithEvents ToolTip As ToolTip
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem

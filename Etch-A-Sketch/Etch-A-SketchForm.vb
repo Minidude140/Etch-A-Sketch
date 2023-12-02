@@ -37,17 +37,6 @@ Public Class Form1
         g.Dispose()
     End Sub
 
-
-    'Event Handlers
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
-        SetDefaults()
-    End Sub
-    Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click,
-                                                                           ExitContextStripMenuItem.Click,
-                                                                           ExitToolStripMenuItem.Click
-        Me.Close()
-    End Sub
-
     'Test Button
     ''' <summary>
     ''' DEV Test Button.  (Will be removed at some point)
@@ -56,5 +45,21 @@ Public Class Form1
     ''' <param name="e"></param>
     Private Sub TestButton_Click(sender As Object, e As EventArgs) Handles TestButton.Click
         DrawLine(0, 0, (DrawingPictureBox.Width - 10), (DrawingPictureBox.Height - 10))
+    End Sub
+
+    'Event Handlers
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        SetDefaults()
+    End Sub
+    Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click,
+                                                                           ExitContextStripItem.Click,
+                                                                           ExitToolStripMenuItem.Click
+        Me.Close()
+    End Sub
+
+    Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click,
+                                                                            ClearContextStripItem.Click,
+                                                                            ClearToolStripMenuItem.Click
+
     End Sub
 End Class
