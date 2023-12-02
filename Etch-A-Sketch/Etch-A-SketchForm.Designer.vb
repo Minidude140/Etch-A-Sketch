@@ -74,13 +74,13 @@ Partial Class Form1
         '
         Me.ContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileContextStripItem, Me.EditContextStripItem, Me.HelpContextStripItem})
         Me.ContextMenuStrip.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip.Size = New System.Drawing.Size(181, 92)
+        Me.ContextMenuStrip.Size = New System.Drawing.Size(100, 70)
         '
         'FileContextStripItem
         '
         Me.FileContextStripItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitContextStripItem})
         Me.FileContextStripItem.Name = "FileContextStripItem"
-        Me.FileContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.FileContextStripItem.Size = New System.Drawing.Size(99, 22)
         Me.FileContextStripItem.Text = "File"
         '
         'ExitContextStripItem
@@ -93,7 +93,7 @@ Partial Class Form1
         '
         Me.EditContextStripItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectColorContextStripItem, Me.DrawWaveformsContextStripItem, Me.ClearContextStripItem})
         Me.EditContextStripItem.Name = "EditContextStripItem"
-        Me.EditContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.EditContextStripItem.Size = New System.Drawing.Size(99, 22)
         Me.EditContextStripItem.Text = "Edit"
         '
         'SelectColorContextStripItem
@@ -131,7 +131,7 @@ Partial Class Form1
         '
         Me.HelpContextStripItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutContextStripItem})
         Me.HelpContextStripItem.Name = "HelpContextStripItem"
-        Me.HelpContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.HelpContextStripItem.Size = New System.Drawing.Size(99, 22)
         Me.HelpContextStripItem.Text = "Help"
         '
         'AboutContextStripItem
@@ -224,31 +224,31 @@ Partial Class Form1
         '
         Me.SelectColorToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PenColorToolStripMenuItem, Me.BackgroundColorToolStripMenuItem})
         Me.SelectColorToolStripMenuItem.Name = "SelectColorToolStripMenuItem"
-        Me.SelectColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectColorToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.SelectColorToolStripMenuItem.Text = "Select Color"
         '
         'PenColorToolStripMenuItem
         '
         Me.PenColorToolStripMenuItem.Name = "PenColorToolStripMenuItem"
-        Me.PenColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PenColorToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.PenColorToolStripMenuItem.Text = "Pen Color"
         '
         'BackgroundColorToolStripMenuItem
         '
         Me.BackgroundColorToolStripMenuItem.Name = "BackgroundColorToolStripMenuItem"
-        Me.BackgroundColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BackgroundColorToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.BackgroundColorToolStripMenuItem.Text = "Background Color"
         '
         'DrawWaveformsToolStripMenuItem
         '
         Me.DrawWaveformsToolStripMenuItem.Name = "DrawWaveformsToolStripMenuItem"
-        Me.DrawWaveformsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DrawWaveformsToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.DrawWaveformsToolStripMenuItem.Text = "Draw Waveforms"
         '
         'ClearToolStripMenuItem
         '
         Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
-        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ClearToolStripMenuItem.Text = "Clear"
         '
         'HelpToolStripMenuItem
@@ -289,6 +289,7 @@ Partial Class Form1
         Me.Controls.Add(Me.DrawingPictureBox)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Etch-A-Sketch"
         CType(Me.DrawingPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip.ResumeLayout(False)

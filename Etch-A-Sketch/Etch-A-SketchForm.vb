@@ -16,8 +16,11 @@ Public Class Form1
     ''' Sets the Default Colors and clears picture box
     ''' </summary>
     Sub SetDefaults()
+        'Erase the screen
         DrawingPictureBox.Refresh()
+        'Change pen color to black
         Me.penColor = Color.Black
+        'Change background color to "Blanched Almond"
         Me.backgroundColor = Color.BlanchedAlmond
         DrawingPictureBox.BackColor = Me.backgroundColor
     End Sub
@@ -49,8 +52,10 @@ Public Class Form1
     ''' <param name="changePenColor"></param>
     Sub ChangeColor(newColor As Color, Optional changePenColor As Boolean = True)
         If changePenColor = True Then
+            'change pen color
             penColor = newColor
         Else
+            'change background color
             backgroundColor = newColor
             DrawingPictureBox.BackColor = newColor
         End If
@@ -70,6 +75,7 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         SetDefaults()
     End Sub
+
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click,
                                                                            ExitContextStripItem.Click,
                                                                            ExitToolStripMenuItem.Click
@@ -88,8 +94,7 @@ Public Class Form1
                                                                                   SelectColorContextStripItem.Click,
                                                                                   SelectColorToolStripMenuItem.Click
         'Need to ask user for pen or background
-        MsgBox()
-        '("Would you like to change the pen or background?",)
+        'Started creating custom message box to determine which color user wants to change need to ask for help
     End Sub
 
     Private Sub PenColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PenColorContextStripItem.Click,
@@ -108,4 +113,5 @@ Public Class Form1
         'Set Background Color to Chosen Dialog Option
         ChangeColor(SelectColorDialog.Color, False)
     End Sub
+
 End Class
