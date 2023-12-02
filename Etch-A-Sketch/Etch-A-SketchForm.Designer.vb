@@ -75,13 +75,13 @@ Partial Class Form1
         '
         Me.FileContextStripItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitContextStripItem})
         Me.FileContextStripItem.Name = "FileContextStripItem"
-        Me.FileContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.FileContextStripItem.Size = New System.Drawing.Size(99, 22)
         Me.FileContextStripItem.Text = "File"
         '
         'ExitContextStripItem
         '
         Me.ExitContextStripItem.Name = "ExitContextStripItem"
-        Me.ExitContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitContextStripItem.Size = New System.Drawing.Size(93, 22)
         Me.ExitContextStripItem.Text = "Exit"
         '
         'EditContextStripItem
@@ -94,32 +94,32 @@ Partial Class Form1
         'SelectColorContextStripItem
         '
         Me.SelectColorContextStripItem.Name = "SelectColorContextStripItem"
-        Me.SelectColorContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectColorContextStripItem.Size = New System.Drawing.Size(164, 22)
         Me.SelectColorContextStripItem.Text = "Select Color"
         '
         'DrawWaveformsContextStripItem
         '
         Me.DrawWaveformsContextStripItem.Name = "DrawWaveformsContextStripItem"
-        Me.DrawWaveformsContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.DrawWaveformsContextStripItem.Size = New System.Drawing.Size(164, 22)
         Me.DrawWaveformsContextStripItem.Text = "Draw Waveforms"
         '
         'ClearContextStripItem
         '
         Me.ClearContextStripItem.Name = "ClearContextStripItem"
-        Me.ClearContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearContextStripItem.Size = New System.Drawing.Size(164, 22)
         Me.ClearContextStripItem.Text = "Clear"
         '
         'HelpContextStripItem
         '
         Me.HelpContextStripItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutContextStripItem})
         Me.HelpContextStripItem.Name = "HelpContextStripItem"
-        Me.HelpContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.HelpContextStripItem.Size = New System.Drawing.Size(99, 22)
         Me.HelpContextStripItem.Text = "Help"
         '
         'AboutContextStripItem
         '
         Me.AboutContextStripItem.Name = "AboutContextStripItem"
-        Me.AboutContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutContextStripItem.Size = New System.Drawing.Size(107, 22)
         Me.AboutContextStripItem.Text = "About"
         '
         'ExitButton
@@ -205,19 +205,19 @@ Partial Class Form1
         'SelectColorToolStripMenuItem
         '
         Me.SelectColorToolStripMenuItem.Name = "SelectColorToolStripMenuItem"
-        Me.SelectColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectColorToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.SelectColorToolStripMenuItem.Text = "Select Color"
         '
         'DrawWaveformsToolStripMenuItem
         '
         Me.DrawWaveformsToolStripMenuItem.Name = "DrawWaveformsToolStripMenuItem"
-        Me.DrawWaveformsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DrawWaveformsToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.DrawWaveformsToolStripMenuItem.Text = "Draw Waveforms"
         '
         'ClearToolStripMenuItem
         '
         Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
-        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ClearToolStripMenuItem.Text = "Clear"
         '
         'HelpToolStripMenuItem

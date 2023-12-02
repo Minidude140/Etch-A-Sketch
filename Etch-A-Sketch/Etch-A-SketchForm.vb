@@ -60,6 +60,16 @@ Public Class Form1
     Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click,
                                                                             ClearContextStripItem.Click,
                                                                             ClearToolStripMenuItem.Click
+        'Erase the current drawings
+        DrawingPictureBox.Refresh()
+        '**Need to add shake**
+    End Sub
 
+    Private Sub SelectColorButton_Click(sender As Object, e As EventArgs) Handles SelectColorButton.Click,
+                                                                                  SelectColorContextStripItem.Click,
+                                                                                  SelectColorToolStripMenuItem.Click
+        'Change the color of the pen here
+
+        '**Need to add middle mouse button**
     End Sub
 End Class
