@@ -49,6 +49,7 @@ Partial Class Form1
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ButtonGroupBox = New System.Windows.Forms.GroupBox()
+        Me.SelectColorDialog = New System.Windows.Forms.ColorDialog()
         CType(Me.DrawingPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -192,7 +193,7 @@ Partial Class Form1
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(93, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'EditToolStripMenuItem
@@ -295,4 +296,5 @@ Partial Class Form1
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ButtonGroupBox As GroupBox
     Friend WithEvents TestButton As Button
+    Friend WithEvents SelectColorDialog As ColorDialog
 End Class

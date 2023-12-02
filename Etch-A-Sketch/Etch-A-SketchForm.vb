@@ -8,6 +8,7 @@ Option Explicit On
 Option Strict On
 
 Public Class Form1
+    Dim penColor As Color
 
     'Custom Methods
     ''' <summary>
@@ -15,6 +16,7 @@ Public Class Form1
     ''' </summary>
     Sub SetDefaults()
         DrawingPictureBox.Refresh()
+        Me.penColor = Color.Black
         DrawingPictureBox.BackColor = Color.BlanchedAlmond
     End Sub
 
@@ -29,12 +31,16 @@ Public Class Form1
         'initialize graphics object and set drawing surface to picture box
         Dim g As Graphics = DrawingPictureBox.CreateGraphics
         'initialize pen as color black
-        Dim pen As New Pen(Color.Black)
+        Dim pen As New Pen(Me.penColor)
         'draws a line from given co-ordinates (x,y) to (x,y); (0,0) in upper left hand corner
         g.DrawLine(pen, x1, y1, x2, y2)
         'dispose of the pen and graphics object to clear memory
         pen.Dispose()
         g.Dispose()
+    End Sub
+
+    Sub ChangeColor(newColor As Color)
+        penColor = newColor
     End Sub
 
     'Test Button
@@ -69,7 +75,8 @@ Public Class Form1
                                                                                   SelectColorContextStripItem.Click,
                                                                                   SelectColorToolStripMenuItem.Click
         'Change the color of the pen here
-
+        SelectColorDialog.ShowDialog()
+        ChangeColor(SelectColorDialog.Color)
         '**Need to add middle mouse button**
     End Sub
 End Class
