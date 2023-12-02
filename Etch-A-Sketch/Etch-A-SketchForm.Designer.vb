@@ -24,10 +24,6 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.DrawingPictureBox = New System.Windows.Forms.PictureBox()
-        Me.ExitButton = New System.Windows.Forms.Button()
-        Me.ClearButton = New System.Windows.Forms.Button()
-        Me.SelectColorButton = New System.Windows.Forms.Button()
-        Me.DrawWaveformsButton = New System.Windows.Forms.Button()
         Me.ContextMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.FileContextStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitContextStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -37,6 +33,10 @@ Partial Class Form1
         Me.ClearContextStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpContextStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutContextStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitButton = New System.Windows.Forms.Button()
+        Me.ClearButton = New System.Windows.Forms.Button()
+        Me.SelectColorButton = New System.Windows.Forms.Button()
+        Me.DrawWaveformsButton = New System.Windows.Forms.Button()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -48,6 +48,7 @@ Partial Class Form1
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ButtonGroupBox = New System.Windows.Forms.GroupBox()
+        Me.TestButton = New System.Windows.Forms.Button()
         CType(Me.DrawingPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -63,47 +64,6 @@ Partial Class Form1
         Me.DrawingPictureBox.Size = New System.Drawing.Size(784, 330)
         Me.DrawingPictureBox.TabIndex = 0
         Me.DrawingPictureBox.TabStop = False
-        '
-        'ExitButton
-        '
-        Me.ExitButton.Location = New System.Drawing.Point(520, 7)
-        Me.ExitButton.Name = "ExitButton"
-        Me.ExitButton.Size = New System.Drawing.Size(128, 47)
-        Me.ExitButton.TabIndex = 3
-        Me.ExitButton.Text = "E&xit"
-        Me.ToolTip.SetToolTip(Me.ExitButton, "Exit Program")
-        Me.ExitButton.UseVisualStyleBackColor = True
-        '
-        'ClearButton
-        '
-        Me.ClearButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.ClearButton.Location = New System.Drawing.Point(386, 7)
-        Me.ClearButton.Name = "ClearButton"
-        Me.ClearButton.Size = New System.Drawing.Size(128, 47)
-        Me.ClearButton.TabIndex = 2
-        Me.ClearButton.Text = "&Clear"
-        Me.ToolTip.SetToolTip(Me.ClearButton, "Clear Drawing")
-        Me.ClearButton.UseVisualStyleBackColor = True
-        '
-        'SelectColorButton
-        '
-        Me.SelectColorButton.Location = New System.Drawing.Point(252, 7)
-        Me.SelectColorButton.Name = "SelectColorButton"
-        Me.SelectColorButton.Size = New System.Drawing.Size(128, 47)
-        Me.SelectColorButton.TabIndex = 1
-        Me.SelectColorButton.Text = "&Select Color"
-        Me.ToolTip.SetToolTip(Me.SelectColorButton, "Select Pen Color")
-        Me.SelectColorButton.UseVisualStyleBackColor = True
-        '
-        'DrawWaveformsButton
-        '
-        Me.DrawWaveformsButton.Location = New System.Drawing.Point(118, 7)
-        Me.DrawWaveformsButton.Name = "DrawWaveformsButton"
-        Me.DrawWaveformsButton.Size = New System.Drawing.Size(128, 47)
-        Me.DrawWaveformsButton.TabIndex = 0
-        Me.DrawWaveformsButton.Text = "&Draw Waveforms"
-        Me.ToolTip.SetToolTip(Me.DrawWaveformsButton, "Draws a Sin, Cos, and Tan Waveform")
-        Me.DrawWaveformsButton.UseVisualStyleBackColor = True
         '
         'ContextMenuStrip
         '
@@ -121,7 +81,7 @@ Partial Class Form1
         'ExitContextStripMenuItem
         '
         Me.ExitContextStripMenuItem.Name = "ExitContextStripMenuItem"
-        Me.ExitContextStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitContextStripMenuItem.Size = New System.Drawing.Size(93, 22)
         Me.ExitContextStripMenuItem.Text = "Exit"
         '
         'EditContextStripMenuItem1
@@ -134,19 +94,19 @@ Partial Class Form1
         'SelectColorContextStripMenuItem
         '
         Me.SelectColorContextStripMenuItem.Name = "SelectColorContextStripMenuItem"
-        Me.SelectColorContextStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectColorContextStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.SelectColorContextStripMenuItem.Text = "Select Color"
         '
         'DrawWaveformsContextStripMenuItem
         '
         Me.DrawWaveformsContextStripMenuItem.Name = "DrawWaveformsContextStripMenuItem"
-        Me.DrawWaveformsContextStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DrawWaveformsContextStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.DrawWaveformsContextStripMenuItem.Text = "Draw Waveforms"
         '
         'ClearContextStripMenuItem
         '
         Me.ClearContextStripMenuItem.Name = "ClearContextStripMenuItem"
-        Me.ClearContextStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearContextStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ClearContextStripMenuItem.Text = "Clear"
         '
         'HelpContextStripMenuItem
@@ -159,8 +119,49 @@ Partial Class Form1
         'AboutContextStripMenuItem1
         '
         Me.AboutContextStripMenuItem1.Name = "AboutContextStripMenuItem1"
-        Me.AboutContextStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.AboutContextStripMenuItem1.Size = New System.Drawing.Size(107, 22)
         Me.AboutContextStripMenuItem1.Text = "About"
+        '
+        'ExitButton
+        '
+        Me.ExitButton.Location = New System.Drawing.Point(531, 16)
+        Me.ExitButton.Name = "ExitButton"
+        Me.ExitButton.Size = New System.Drawing.Size(128, 47)
+        Me.ExitButton.TabIndex = 3
+        Me.ExitButton.Text = "E&xit"
+        Me.ToolTip.SetToolTip(Me.ExitButton, "Exit Program")
+        Me.ExitButton.UseVisualStyleBackColor = True
+        '
+        'ClearButton
+        '
+        Me.ClearButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.ClearButton.Location = New System.Drawing.Point(397, 16)
+        Me.ClearButton.Name = "ClearButton"
+        Me.ClearButton.Size = New System.Drawing.Size(128, 47)
+        Me.ClearButton.TabIndex = 2
+        Me.ClearButton.Text = "&Clear"
+        Me.ToolTip.SetToolTip(Me.ClearButton, "Clear Drawing")
+        Me.ClearButton.UseVisualStyleBackColor = True
+        '
+        'SelectColorButton
+        '
+        Me.SelectColorButton.Location = New System.Drawing.Point(263, 16)
+        Me.SelectColorButton.Name = "SelectColorButton"
+        Me.SelectColorButton.Size = New System.Drawing.Size(128, 47)
+        Me.SelectColorButton.TabIndex = 1
+        Me.SelectColorButton.Text = "&Select Color"
+        Me.ToolTip.SetToolTip(Me.SelectColorButton, "Select Pen Color")
+        Me.SelectColorButton.UseVisualStyleBackColor = True
+        '
+        'DrawWaveformsButton
+        '
+        Me.DrawWaveformsButton.Location = New System.Drawing.Point(129, 16)
+        Me.DrawWaveformsButton.Name = "DrawWaveformsButton"
+        Me.DrawWaveformsButton.Size = New System.Drawing.Size(128, 47)
+        Me.DrawWaveformsButton.TabIndex = 0
+        Me.DrawWaveformsButton.Text = "&Draw Waveforms"
+        Me.ToolTip.SetToolTip(Me.DrawWaveformsButton, "Draws a Sin, Cos, and Tan Waveform")
+        Me.DrawWaveformsButton.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
@@ -181,7 +182,7 @@ Partial Class Form1
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(93, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'EditToolStripMenuItem
@@ -194,19 +195,19 @@ Partial Class Form1
         'SelectColorToolStripMenuItem
         '
         Me.SelectColorToolStripMenuItem.Name = "SelectColorToolStripMenuItem"
-        Me.SelectColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectColorToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.SelectColorToolStripMenuItem.Text = "Select Color"
         '
         'DrawWaveformsToolStripMenuItem
         '
         Me.DrawWaveformsToolStripMenuItem.Name = "DrawWaveformsToolStripMenuItem"
-        Me.DrawWaveformsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DrawWaveformsToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.DrawWaveformsToolStripMenuItem.Text = "Draw Waveforms"
         '
         'ClearToolStripMenuItem
         '
         Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
-        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ClearToolStripMenuItem.Text = "Clear"
         '
         'HelpToolStripMenuItem
@@ -219,20 +220,31 @@ Partial Class Form1
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'ButtonGroupBox
         '
+        Me.ButtonGroupBox.Controls.Add(Me.TestButton)
         Me.ButtonGroupBox.Controls.Add(Me.DrawWaveformsButton)
         Me.ButtonGroupBox.Controls.Add(Me.SelectColorButton)
         Me.ButtonGroupBox.Controls.Add(Me.ClearButton)
         Me.ButtonGroupBox.Controls.Add(Me.ExitButton)
-        Me.ButtonGroupBox.Location = New System.Drawing.Point(11, 384)
+        Me.ButtonGroupBox.Location = New System.Drawing.Point(5, 378)
         Me.ButtonGroupBox.Name = "ButtonGroupBox"
-        Me.ButtonGroupBox.Size = New System.Drawing.Size(783, 65)
+        Me.ButtonGroupBox.Size = New System.Drawing.Size(783, 73)
         Me.ButtonGroupBox.TabIndex = 6
         Me.ButtonGroupBox.TabStop = False
+        '
+        'TestButton
+        '
+        Me.TestButton.Location = New System.Drawing.Point(24, 27)
+        Me.TestButton.Name = "TestButton"
+        Me.TestButton.Size = New System.Drawing.Size(46, 24)
+        Me.TestButton.TabIndex = 4
+        Me.TestButton.Text = "Test"
+        Me.ToolTip.SetToolTip(Me.TestButton, "Button Used For Dev Testing")
+        Me.TestButton.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -282,4 +294,5 @@ Partial Class Form1
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ButtonGroupBox As GroupBox
+    Friend WithEvents TestButton As Button
 End Class

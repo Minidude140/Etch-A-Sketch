@@ -8,6 +8,7 @@ Option Explicit On
 Option Strict On
 
 Public Class Form1
+
     'Custom Methods
     ''' <summary>
     ''' Sets the Default Colors and clears picture box
@@ -47,4 +48,13 @@ Public Class Form1
         Me.Close()
     End Sub
 
+    'Test Button
+    ''' <summary>
+    ''' DEV Test Button.  (Will be removed at some point)
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub TestButton_Click(sender As Object, e As EventArgs) Handles TestButton.Click
+
+    End Sub
 End Class
