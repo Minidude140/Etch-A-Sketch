@@ -7,9 +7,16 @@
 Option Explicit On
 Option Strict On
 
+
+'TODO
+'[]Figure out custom message box form
+'[]Figure out middle mouse click
+'[~]Change pen size
+
 Public Class Form1
     Dim penColor As Color
     Dim backgroundColor As Color
+    Dim penSize As Integer
 
     'Custom Methods
     ''' <summary>
@@ -23,6 +30,8 @@ Public Class Form1
         'Change background color to "Blanched Almond"
         Me.backgroundColor = Color.BlanchedAlmond
         DrawingPictureBox.BackColor = Me.backgroundColor
+        'Set default pen size
+        Me.penSize = 2
     End Sub
 
     ''' <summary>
@@ -36,7 +45,7 @@ Public Class Form1
         'initialize graphics object and set drawing surface to picture box
         Dim g As Graphics = DrawingPictureBox.CreateGraphics
         'initialize pen as color black
-        Dim pen As New Pen(Me.penColor)
+        Dim pen As New Pen(Me.penColor, Me.penSize)
         'draws a line from given co-ordinates (x,y) to (x,y); (0,0) in upper left hand corner
         g.DrawLine(pen, x1, y1, x2, y2)
         'dispose of the pen and graphics object to clear memory
@@ -124,5 +133,15 @@ Public Class Form1
         End Select
         oldX = e.X
         oldY = e.Y
+    End Sub
+
+    Private Sub DrawingPictureBox_MouseWheel(sender As Object, e As MouseEventArgs) Handles DrawingPictureBox.MouseWheel
+        If e.Delta > 0 Then
+            'mouse scroll up
+            penSize += 1
+        Else
+            'mouse scroll down
+            penSize -= 1
+        End If
     End Sub
 End Class
