@@ -129,14 +129,51 @@ Public Class Form1
         Next
     End Sub
 
+    'Sub drawtanwave()
+    '    'declare points to draw from and maximum wave size
+    '    Dim oldx%, oldy%, newx%, newy%
+    '    Dim ycenter As Integer = (DrawingPictureBox.Height \ 2)
+    '    Dim xcenter As Integer = (DrawingPictureBox.Width \ 2)
+    '    Dim xmax As Integer = DrawingPictureBox.Width
+    '    Dim ymax As Integer = DrawingPictureBox.Height
+    '    Const pi As Double = System.Math.PI
+    '    'set start point
+    '    oldx = xcenter
+    '    oldy = ycenter
+    '    'iterate(increment) through the x and calculate y value
+    '    For i = xcenter To xmax Step (xmax / 360)
+    '        'calculate new points
+    '        newx = CInt(i)
+    '        'f(x) = atan(b(x-c) + d
+    '        '(c,d) = center point
+    '        'a + d = ymax ; a + ycenter = ymax ; **a = ymax - ycenter**
+    '        'pi/4b + c = xmax ; pi/4b + xcenter = xmax ; b = pi/(xmax - xcenter) * 4
+    '        newy = CInt((((ymax - ycenter) * System.Math.Tan((pi / (xmax - xcenter) * 4) * (i - xcenter))) + ycenter))
+    '        'drawn calculated points
+    '        DrawLine(oldx, oldy, newx, newy)
+    '        'set old points to current point
+    '        oldx = newx
+    '        oldy = newy
+    '    Next
+    'End Sub
+
     'Test Button
+
+    ''' <summary>
+    ''' Shakes the Picture box up and down **Does Not Currently work**
+    ''' </summary>
+    Sub ShakeScreen()
+
+    End Sub
+
+
     ''' <summary>
     ''' DEV Test Button.  (Will be removed at some point)
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub TestButton_Click(sender As Object, e As EventArgs) Handles TestButton.Click
-        DrawCosWave()
+
     End Sub
 
     'Event Handlers
@@ -155,7 +192,8 @@ Public Class Form1
                                                                             ClearToolStripMenuItem.Click
         'Erase the current drawings
         DrawingPictureBox.Refresh()
-        '**Need to add shake**
+        '**Shake Does Not Currently Work**
+        ShakeScreen()
     End Sub
 
     Private Sub SelectColorButton_Click(sender As Object, e As EventArgs) Handles SelectColorButton.Click,
