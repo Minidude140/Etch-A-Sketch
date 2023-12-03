@@ -12,7 +12,7 @@ Option Strict On
 '[~]Figure out middle mouse click
 '[~]Change pen size
 '[~]Create about form
-'[]Shake Screen when clear button is clicked
+'[~]Shake Screen when clear button is clicked
 '[]Figure out custom message box form
 
 '[]Draw waveforms
@@ -213,10 +213,16 @@ Public Class Form1
     End Sub
 
     ''' <summary>
-    ''' Shakes the Picture box up and down **Does Not Currently work**
+    ''' Shakes the Form up and down
     ''' </summary>
     Sub ShakeScreen()
+        Dim offset As Integer = 50
 
+        For i = 1 To 10
+            offset = offset * -1
+            Me.Top += offset
+            System.Threading.Thread.Sleep(100)
+        Next
     End Sub
 
     ''' <summary>
@@ -244,7 +250,7 @@ Public Class Form1
                                                                             ClearToolStripMenuItem.Click
         'Erase the current drawings
         DrawingPictureBox.Refresh()
-        '**Shake Does Not Currently Work**
+        'Shake the screen up and down
         ShakeScreen()
     End Sub
 
