@@ -68,7 +68,7 @@ Partial Class Form1
         Me.DrawingPictureBox.BackColor = System.Drawing.Color.BlanchedAlmond
         Me.DrawingPictureBox.ContextMenuStrip = Me.ContextMenuStrip
         Me.DrawingPictureBox.Location = New System.Drawing.Point(15, 52)
-        Me.DrawingPictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DrawingPictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.DrawingPictureBox.Name = "DrawingPictureBox"
         Me.DrawingPictureBox.Size = New System.Drawing.Size(1036, 406)
         Me.DrawingPictureBox.TabIndex = 0
@@ -79,13 +79,13 @@ Partial Class Form1
         '
         Me.ContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileContextStripItem, Me.EditContextStripItem, Me.HelpContextStripItem})
         Me.ContextMenuStrip.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip.Size = New System.Drawing.Size(181, 92)
+        Me.ContextMenuStrip.Size = New System.Drawing.Size(100, 70)
         '
         'FileContextStripItem
         '
         Me.FileContextStripItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitContextStripItem})
         Me.FileContextStripItem.Name = "FileContextStripItem"
-        Me.FileContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.FileContextStripItem.Size = New System.Drawing.Size(99, 22)
         Me.FileContextStripItem.Text = "File"
         '
         'ExitContextStripItem
@@ -98,7 +98,7 @@ Partial Class Form1
         '
         Me.EditContextStripItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectColorContextStripItem, Me.DrawWaveformsContextStripItem, Me.ClearContextStripItem})
         Me.EditContextStripItem.Name = "EditContextStripItem"
-        Me.EditContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.EditContextStripItem.Size = New System.Drawing.Size(99, 22)
         Me.EditContextStripItem.Text = "Edit"
         '
         'SelectColorContextStripItem
@@ -136,7 +136,7 @@ Partial Class Form1
         '
         Me.HelpContextStripItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutContextStripItem})
         Me.HelpContextStripItem.Name = "HelpContextStripItem"
-        Me.HelpContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.HelpContextStripItem.Size = New System.Drawing.Size(99, 22)
         Me.HelpContextStripItem.Text = "Help"
         '
         'AboutContextStripItem
@@ -149,7 +149,7 @@ Partial Class Form1
         '
         Me.ExitButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ExitButton.Location = New System.Drawing.Point(708, 20)
-        Me.ExitButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ExitButton.Margin = New System.Windows.Forms.Padding(4)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(171, 58)
         Me.ExitButton.TabIndex = 4
@@ -162,7 +162,7 @@ Partial Class Form1
         Me.ClearButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ClearButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.ClearButton.Location = New System.Drawing.Point(529, 20)
-        Me.ClearButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ClearButton.Margin = New System.Windows.Forms.Padding(4)
         Me.ClearButton.Name = "ClearButton"
         Me.ClearButton.Size = New System.Drawing.Size(171, 58)
         Me.ClearButton.TabIndex = 3
@@ -174,7 +174,7 @@ Partial Class Form1
         '
         Me.SelectColorButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.SelectColorButton.Location = New System.Drawing.Point(351, 20)
-        Me.SelectColorButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SelectColorButton.Margin = New System.Windows.Forms.Padding(4)
         Me.SelectColorButton.Name = "SelectColorButton"
         Me.SelectColorButton.Size = New System.Drawing.Size(171, 58)
         Me.SelectColorButton.TabIndex = 2
@@ -186,7 +186,7 @@ Partial Class Form1
         '
         Me.DrawWaveformsButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.DrawWaveformsButton.Location = New System.Drawing.Point(172, 20)
-        Me.DrawWaveformsButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DrawWaveformsButton.Margin = New System.Windows.Forms.Padding(4)
         Me.DrawWaveformsButton.Name = "DrawWaveformsButton"
         Me.DrawWaveformsButton.Size = New System.Drawing.Size(171, 58)
         Me.DrawWaveformsButton.TabIndex = 1
@@ -198,7 +198,7 @@ Partial Class Form1
         '
         Me.TestButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TestButton.Location = New System.Drawing.Point(32, 33)
-        Me.TestButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TestButton.Margin = New System.Windows.Forms.Padding(4)
         Me.TestButton.Name = "TestButton"
         Me.TestButton.Size = New System.Drawing.Size(61, 30)
         Me.TestButton.TabIndex = 0
@@ -277,7 +277,7 @@ Partial Class Form1
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'ButtonGroupBox
@@ -291,9 +291,9 @@ Partial Class Form1
         Me.ButtonGroupBox.Controls.Add(Me.ClearButton)
         Me.ButtonGroupBox.Controls.Add(Me.ExitButton)
         Me.ButtonGroupBox.Location = New System.Drawing.Point(15, 454)
-        Me.ButtonGroupBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonGroupBox.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonGroupBox.Name = "ButtonGroupBox"
-        Me.ButtonGroupBox.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonGroupBox.Padding = New System.Windows.Forms.Padding(4)
         Me.ButtonGroupBox.Size = New System.Drawing.Size(1036, 101)
         Me.ButtonGroupBox.TabIndex = 6
         Me.ButtonGroupBox.TabStop = False
@@ -309,7 +309,7 @@ Partial Class Form1
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.DrawingPictureBox)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MinimumSize = New System.Drawing.Size(1083, 593)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

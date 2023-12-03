@@ -14,10 +14,10 @@ Option Strict On
 '[~]Create about form
 '[~]Shake Screen when clear button is clicked
 '[]Figure out custom message box form
-
-'[]Draw waveforms
-'{}Tan wave sub (Green)
 '{}graticule placement kinda funky
+
+'[~]Draw waveforms
+'{~}Tan wave sub (Green)
 '{~}Sin wave sub (red)
 '{~}Cos wave sub (Blue)
 '{~}Draw 10x10 Graticule (Black)
@@ -130,35 +130,35 @@ Public Class Form1
         Next
     End Sub
 
-    'Sub drawtanwave()
-    '    'declare points to draw from and maximum wave size
-    '    Dim oldx%, oldy%, newx%, newy%
-    '    Dim ycenter As Integer = (DrawingPictureBox.Height \ 2)
-    '    Dim xcenter As Integer = (DrawingPictureBox.Width \ 2)
-    '    Dim xmax As Integer = DrawingPictureBox.Width
-    '    Dim ymax As Integer = DrawingPictureBox.Height
-    '    Const pi As Double = System.Math.PI
-    '    'set start point
-    '    oldx = xcenter
-    '    oldy = ycenter
-    '    'iterate(increment) through the x and calculate y value
-    '    For i = xcenter To xmax Step (xmax / 360)
-    '        'calculate new points
-    '        newx = CInt(i)
-    '        'f(x) = atan(b(x-c) + d
-    '        '(c,d) = center point
-    '        'a + d = ymax ; a + ycenter = ymax ; **a = ymax - ycenter**
-    '        'pi/4b + c = xmax ; pi/4b + xcenter = xmax ; b = pi/(xmax - xcenter) * 4
-    '        newy = CInt((((ymax - ycenter) * System.Math.Tan((pi / (xmax - xcenter) * 4) * (i - xcenter))) + ycenter))
-    '        'drawn calculated points
-    '        DrawLine(oldx, oldy, newx, newy)
-    '        'set old points to current point
-    '        oldx = newx
-    '        oldy = newy
-    '    Next
-    'End Sub
-
-    'Test Button
+    ''' <summary>
+    ''' Draws a Tan Wave across the Picture Box
+    ''' </summary>
+    Sub DrawTanWave()
+        Dim yMax# = ((DrawingPictureBox.Height - 5) \ 2) 'absolute distance from zero
+        Dim yOffset# = yMax  'push the wave down to center
+        Dim lastX% = -1, lastY% = CInt(yOffset), currentY%, currentX%
+        Dim angle#
+        'plot one cycle that spans the entire picture box
+        For x = 0 To CInt(DrawingPictureBox.Width) Step DrawingPictureBox.Width / 360
+            angle = (Math.PI / 180) * x 'degrees to radians
+            'surround the entire expression with the integer conversion
+            'losing too much precision converting the small value terms
+            Try
+                currentY = CInt(-1 * yMax * Math.Tan(angle) + yOffset)
+                currentX = CInt(x * DrawingPictureBox.Width / 360)
+                DrawLine(lastX, lastY, currentX, currentY)
+                'current end point becomes next start point
+                'y won't update if exception thrown
+                lastY = currentY
+            Catch ex As Exception
+                'if Tan function tries to go to infinite or otherwise
+                'overflows the currentY integer variable skip this point.
+                'could also simply not update y if outside the bounds of the picture box.
+            End Try
+            'update x every time
+            lastX = currentX
+        Next
+    End Sub
 
     ''' <summary>
     ''' Draw a 10x10 Graticule across the picture box
@@ -191,6 +191,9 @@ Public Class Form1
         Next
     End Sub
 
+    ''' <summary>
+    ''' Draws The graticule and all 3 waveform types.  Changes Pen color for each wave
+    ''' </summary>
     Sub DrawAllWaveForms()
         'set background color
         DrawingPictureBox.BackColor = Color.BlanchedAlmond
@@ -207,7 +210,7 @@ Public Class Form1
         DrawCosWave()
         'Draw Green Tan Wave 
         penColor = Color.Green
-        'DrawTanWave() ***doesn't work currently**
+        DrawTanWave()
         'Return pen to default color
         penColor = Color.Black
     End Sub
@@ -225,6 +228,7 @@ Public Class Form1
         Next
     End Sub
 
+    'Test Button
     ''' <summary>
     ''' DEV Test Button.  (Will be removed at some point)
     ''' </summary>
@@ -311,5 +315,11 @@ Public Class Form1
     Private Sub AboutContextStripItem_Click(sender As Object, e As EventArgs) Handles AboutContextStripItem.Click,
                                                                                       AboutToolStripMenuItem.Click
         AboutForm.Show()
+    End Sub
+
+    Private Sub DrawWaveformsButton_Click(sender As Object, e As EventArgs) Handles DrawWaveformsButton.Click,
+                                                                                    DrawWaveformsContextStripItem.Click,
+                                                                                    DrawWaveformsToolStripMenuItem.Click
+        DrawAllWaveForms()
     End Sub
 End Class
