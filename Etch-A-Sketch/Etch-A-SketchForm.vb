@@ -228,15 +228,6 @@ Public Class Form1
         Next
     End Sub
 
-    'Test Button
-    ''' <summary>
-    ''' DEV Test Button.  (Will be removed at some point)
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    Private Sub TestButton_Click(sender As Object, e As EventArgs) Handles TestButton.Click
-        DrawAllWaveForms()
-    End Sub
 
     'Event Handlers
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load

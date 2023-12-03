@@ -40,7 +40,6 @@ Partial Class Form1
         Me.SelectColorButton = New System.Windows.Forms.Button()
         Me.DrawWaveformsButton = New System.Windows.Forms.Button()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.TestButton = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -142,7 +141,7 @@ Partial Class Form1
         'AboutContextStripItem
         '
         Me.AboutContextStripItem.Name = "AboutContextStripItem"
-        Me.AboutContextStripItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutContextStripItem.Size = New System.Drawing.Size(107, 22)
         Me.AboutContextStripItem.Text = "About"
         '
         'ExitButton
@@ -193,18 +192,6 @@ Partial Class Form1
         Me.DrawWaveformsButton.Text = "&Draw Waveforms"
         Me.ToolTip.SetToolTip(Me.DrawWaveformsButton, "Draws a Sin, Cos, and Tan Waveform")
         Me.DrawWaveformsButton.UseVisualStyleBackColor = True
-        '
-        'TestButton
-        '
-        Me.TestButton.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TestButton.Location = New System.Drawing.Point(32, 33)
-        Me.TestButton.Margin = New System.Windows.Forms.Padding(4)
-        Me.TestButton.Name = "TestButton"
-        Me.TestButton.Size = New System.Drawing.Size(61, 30)
-        Me.TestButton.TabIndex = 0
-        Me.TestButton.Text = "Test"
-        Me.ToolTip.SetToolTip(Me.TestButton, "Button Used For Dev Testing")
-        Me.TestButton.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
@@ -285,7 +272,6 @@ Partial Class Form1
         Me.ButtonGroupBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ButtonGroupBox.AutoSize = True
-        Me.ButtonGroupBox.Controls.Add(Me.TestButton)
         Me.ButtonGroupBox.Controls.Add(Me.DrawWaveformsButton)
         Me.ButtonGroupBox.Controls.Add(Me.SelectColorButton)
         Me.ButtonGroupBox.Controls.Add(Me.ClearButton)
@@ -349,7 +335,6 @@ Partial Class Form1
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ButtonGroupBox As GroupBox
-    Friend WithEvents TestButton As Button
     Friend WithEvents SelectColorDialog As ColorDialog
     Friend WithEvents PenColorContextStripItem As ToolStripMenuItem
     Friend WithEvents BackgroundColorContextStripItem As ToolStripMenuItem
