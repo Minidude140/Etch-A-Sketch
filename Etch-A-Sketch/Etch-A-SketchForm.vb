@@ -172,7 +172,7 @@ Public Class Form1
         'Draw Vertical Graticule's
         'set starting points 
         oldX = 0
-        oldY = 10
+        oldY = 11
         newY = (DrawingPictureBox.Height - 10)
         'iterate through x
         For i = 0 To 11
