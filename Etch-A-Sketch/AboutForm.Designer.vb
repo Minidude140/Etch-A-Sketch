@@ -30,19 +30,21 @@ Partial Class AboutForm
         'CloseAboutButton
         '
         Me.CloseAboutButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.CloseAboutButton.Location = New System.Drawing.Point(148, 259)
+        Me.CloseAboutButton.Location = New System.Drawing.Point(197, 319)
+        Me.CloseAboutButton.Margin = New System.Windows.Forms.Padding(4)
         Me.CloseAboutButton.Name = "CloseAboutButton"
-        Me.CloseAboutButton.Size = New System.Drawing.Size(186, 30)
+        Me.CloseAboutButton.Size = New System.Drawing.Size(248, 37)
         Me.CloseAboutButton.TabIndex = 0
         Me.CloseAboutButton.Text = "Close"
         Me.CloseAboutButton.UseVisualStyleBackColor = True
         '
         'AboutLabel
         '
-        Me.AboutLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AboutLabel.Location = New System.Drawing.Point(35, 9)
+        Me.AboutLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AboutLabel.Location = New System.Drawing.Point(47, 11)
+        Me.AboutLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.AboutLabel.Name = "AboutLabel"
-        Me.AboutLabel.Size = New System.Drawing.Size(424, 247)
+        Me.AboutLabel.Size = New System.Drawing.Size(565, 304)
         Me.AboutLabel.TabIndex = 1
         Me.AboutLabel.Text = resources.GetString("AboutLabel.Text")
         Me.AboutLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -50,12 +52,13 @@ Partial Class AboutForm
         'AboutForm
         '
         Me.AcceptButton = Me.CloseAboutButton
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(495, 301)
+        Me.ClientSize = New System.Drawing.Size(660, 364)
         Me.Controls.Add(Me.AboutLabel)
         Me.Controls.Add(Me.CloseAboutButton)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "AboutForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "About"

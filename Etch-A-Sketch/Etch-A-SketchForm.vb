@@ -302,4 +302,8 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub AboutContextStripItem_Click(sender As Object, e As EventArgs) Handles AboutContextStripItem.Click,
+                                                                                      AboutToolStripMenuItem.Click
+        AboutForm.Show()
+    End Sub
 End Class
