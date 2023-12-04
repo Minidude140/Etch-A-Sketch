@@ -13,7 +13,7 @@ Option Strict On
 '[~]Change pen size
 '[~]Create about form
 '[~]Shake Screen when clear button is clicked
-'[]Figure out custom message box form
+'[~]Figure out custom message box form
 '{}graticule placement kinda funky
 
 '[~]Draw waveforms
@@ -24,9 +24,32 @@ Option Strict On
 '{~}set default background color and change pen color before drawing each wave type
 
 Public Class Form1
-    Public penColor As Color
+    Public foreGroundColor As Color
     Public backgroundColor As Color
     Dim penSize As Integer
+
+    'Private _foregroundColor As Color
+    'Public Property foregroundcolor() As Color
+    '    Get
+    '        Return _foregroundColor
+    '    End Get
+    '    Set(ByVal value As Color)
+    '        _foregroundColor = value
+    '        ChangeColor(value)
+    '    End Set
+    'End Property
+
+    'Private _backgroundcolor As Color
+    'Public Property backgroundcolor As Color
+
+    '    Get
+    '        Return _backgroundcolor
+    '    End Get
+    '    Set(ByVal value As Color)
+    '        _backgroundcolor = value
+    '        ChangeColor(value, False)
+    '    End Set
+    'End Property
 
     'Custom Methods
     ''' <summary>
@@ -36,7 +59,7 @@ Public Class Form1
         'Erase the screen
         DrawingPictureBox.Refresh()
         'Change pen color to black
-        Me.penColor = Color.Black
+        Me.foregroundColor = Color.Black
         'Change background color to "Blanched Almond"
         Me.backgroundColor = Color.BlanchedAlmond
         DrawingPictureBox.BackColor = Me.backgroundColor
@@ -55,7 +78,7 @@ Public Class Form1
         'initialize graphics object and set drawing surface to picture box
         Dim g As Graphics = DrawingPictureBox.CreateGraphics
         'initialize pen as color black
-        Dim pen As New Pen(Me.penColor, Me.penSize)
+        Dim pen As New Pen(Me.foregroundColor, Me.penSize)
         'draws a line from given co-ordinates (x,y) to (x,y); (0,0) in upper left hand corner
         g.DrawLine(pen, x1, y1, x2, y2)
         'dispose of the pen and graphics object to clear memory
@@ -69,13 +92,14 @@ Public Class Form1
     ''' </summary>
     ''' <param name="newColor"></param>
     ''' <param name="changePenColor"></param>
-    Public Sub ChangeColor(newColor As Color, Optional changePenColor As Boolean = True)
+    Sub ChangeColor(newColor As Color, Optional changePenColor As Boolean = True)
         If changePenColor = True Then
             'change pen color
-            penColor = newColor
+            'penColor.set = newColor
+            Me.foregroundColor = newColor
         Else
             'change background color
-            backgroundColor = newColor
+            Me.backgroundColor = newColor
             DrawingPictureBox.BackColor = newColor
         End If
     End Sub
@@ -198,21 +222,21 @@ Public Class Form1
         'set background color
         DrawingPictureBox.BackColor = Color.BlanchedAlmond
         'Draw black graticule
-        penColor = Color.Black
+        foregroundColor = Color.Black
         DrawGratilules()
         'return to default pen size
         penSize = 2
         'Draw Red Sin Wave
-        penColor = Color.Red
+        foregroundColor = Color.Red
         DrawSinWave()
         'Draw Blue Cos Wave
-        penColor = Color.Blue
+        foregroundColor = Color.Blue
         DrawCosWave()
         'Draw Green Tan Wave 
-        penColor = Color.Green
+        foregroundColor = Color.Green
         DrawTanWave()
         'Return pen to default color
-        penColor = Color.Black
+        foregroundColor = Color.Black
     End Sub
 
     ''' <summary>
@@ -252,7 +276,7 @@ Public Class Form1
     Private Sub SelectColorButton_Click(sender As Object, e As EventArgs) Handles SelectColorButton.Click,
                                                                                   SelectColorContextStripItem.Click,
                                                                                   SelectColorToolStripMenuItem.Click
-        'Need to ask user for pen or background
+        'Ask user for pen or background color
         ColorSelectForm.Show()
     End Sub
 

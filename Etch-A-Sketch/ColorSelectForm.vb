@@ -2,7 +2,7 @@
     Private Sub PenColorButton_Click(sender As Object, e As EventArgs) Handles PenColorButton.Click
         'User Clicked the Change Pen Color Button
         ColorDialogFormSelect.ShowDialog()
-        Form1.penColor = ColorDialogFormSelect.Color
+        Form1.foregroundColor = ColorDialogFormSelect.Color
         Me.Close()
     End Sub
 
