@@ -24,8 +24,8 @@ Option Strict On
 '{~}set default background color and change pen color before drawing each wave type
 
 Public Class Form1
-    Dim penColor As Color
-    Dim backgroundColor As Color
+    Public penColor As Color
+    Public backgroundColor As Color
     Dim penSize As Integer
 
     'Custom Methods
@@ -69,7 +69,7 @@ Public Class Form1
     ''' </summary>
     ''' <param name="newColor"></param>
     ''' <param name="changePenColor"></param>
-    Sub ChangeColor(newColor As Color, Optional changePenColor As Boolean = True)
+    Public Sub ChangeColor(newColor As Color, Optional changePenColor As Boolean = True)
         If changePenColor = True Then
             'change pen color
             penColor = newColor
@@ -253,7 +253,7 @@ Public Class Form1
                                                                                   SelectColorContextStripItem.Click,
                                                                                   SelectColorToolStripMenuItem.Click
         'Need to ask user for pen or background
-        'Started creating custom message box to determine which color user wants to change need to ask for help
+        ColorSelectForm.Show()
     End Sub
 
     Private Sub PenColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PenColorContextStripItem.Click,

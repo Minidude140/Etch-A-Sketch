@@ -25,6 +25,7 @@ Partial Class ColorSelectForm
         Me.PenColorButton = New System.Windows.Forms.Button()
         Me.BackGroundColorButton = New System.Windows.Forms.Button()
         Me.ColorPromptLabel = New System.Windows.Forms.Label()
+        Me.ColorDialogFormSelect = New System.Windows.Forms.ColorDialog()
         Me.SuspendLayout()
         '
         'PenColorButton
@@ -78,4 +79,5 @@ Partial Class ColorSelectForm
     Friend WithEvents PenColorButton As Button
     Friend WithEvents BackGroundColorButton As Button
     Friend WithEvents ColorPromptLabel As Label
+    Friend WithEvents ColorDialogFormSelect As ColorDialog
 End Class
