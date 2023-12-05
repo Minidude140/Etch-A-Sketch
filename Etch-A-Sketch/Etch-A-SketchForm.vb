@@ -174,13 +174,16 @@ Public Class Form1
         Dim oldX%, oldY%, newX%, newY%
         Dim xMax As Integer = DrawingPictureBox.Width
         Dim yMax As Integer = (DrawingPictureBox.Height - 10)
+        Dim yRemainder As Integer
+        Dim xRemainder As Integer
         'Draw Vertical Graticule's
         'set starting points 
-        oldX = 0
-        oldY = 11
+        xRemainder = (xMax Mod 10)
+        oldX = (xRemainder \ 2)
+        oldY = 10
         newY = (DrawingPictureBox.Height - 10)
         'iterate through x
-        For i = 0 To 11
+        For i = 0 To 10
             newX = oldX
             DrawLine(oldX, oldY, newX, newY)
             oldX = newX + (xMax \ 10)
@@ -189,7 +192,7 @@ Public Class Form1
         oldX = 0
         oldY = 10
         'iterate through y
-        For i = 0 To 11
+        For i = 0 To 10
             newY = oldY
             DrawLine(oldX, oldY, newX, newY)
             oldY = newY + (yMax \ 10)
