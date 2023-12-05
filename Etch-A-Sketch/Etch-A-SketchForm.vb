@@ -29,28 +29,6 @@ Public Class Form1
     Public backgroundColor As Color
     Dim penSize As Integer
 
-    ' Private _foregroundColor As Color
-    'Public Property foregroundcolor() As Color
-    '    Get
-    '        Return _foregroundColor
-    '    End Get
-    '    Set(ByVal value As Color)
-    '        _foregroundColor = value
-    '        ChangeColor(value)
-    '    End Set
-    'End Property
-
-    'Private _backgroundcolor As Color
-    'Public Property backgroundcolor As Color
-
-    '    Get
-    '        Return _backgroundcolor
-    '    End Get
-    '    Set(ByVal value As Color)
-    '        _backgroundcolor = value
-    '        ChangeColor(value, False)
-    '    End Set
-    'End Property
 
     'Custom Methods
     ''' <summary>
@@ -58,12 +36,12 @@ Public Class Form1
     ''' </summary>
     Sub SetDefaults()
         'Erase the screen
-        'DrawingPictureBox.Refresh()
+        DrawingPictureBox.Refresh()
         'Change pen color to black
         Me.foregroundColor = Color.Black
         'Change background color to "Blanched Almond"
-        'Me.backgroundColor = Color.BlanchedAlmond
-        'DrawingPictureBox.BackColor = Me.backgroundColor
+        Me.backgroundColor = Color.BlanchedAlmond
+        ChangeColor(backgroundColor, False)
         'Set default pen size
         Me.penSize = 2
     End Sub

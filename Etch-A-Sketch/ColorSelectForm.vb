@@ -3,7 +3,6 @@
         'User Clicked the Change Pen Color Button
         ColorDialogFormSelect.ShowDialog()
         Form1.ChangeColor(ColorDialogFormSelect.Color)
-
         Me.Close()
     End Sub
 
