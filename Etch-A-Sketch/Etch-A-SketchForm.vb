@@ -14,7 +14,7 @@ Option Strict On
 '[~]Create about form
 '[~]Shake Screen when clear button is clicked
 '[~]Figure out custom message box form
-'{}graticule placement kinda funky
+'{~}graticule placement kinda funky
 
 '[~]Draw waveforms
 '{~}Tan wave sub (Green)
