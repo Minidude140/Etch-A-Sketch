@@ -173,7 +173,7 @@ Public Class Form1
         Me.penSize = 1
         Dim oldX%, oldY%, newX%, newY%
         Dim xMax As Integer = DrawingPictureBox.Width
-        Dim yMax As Integer = (DrawingPictureBox.Height - 10)
+        Dim yMax As Integer = (DrawingPictureBox.Height - 20)
         Dim yRemainder As Integer
         Dim xRemainder As Integer
         'Draw Vertical Graticule's
@@ -189,14 +189,17 @@ Public Class Form1
             oldX = newX + (xMax \ 10)
         Next
         'Draw Horizontal Graticule's
-        oldX = 0
-        oldY = 10
+        yRemainder = (yMax Mod 10)
+        oldX = (xRemainder \ 2)
+        oldY = (yRemainder \ 2) + 10
+        newX = DrawingPictureBox.Width - (xRemainder \ 2)
         'iterate through y
         For i = 0 To 10
             newY = oldY
             DrawLine(oldX, oldY, newX, newY)
             oldY = newY + (yMax \ 10)
         Next
+        DrawLine((xRemainder \ 2), (DrawingPictureBox.Height - (yRemainder \ 2)), newX, (DrawingPictureBox.Height - (yRemainder \ 2)))
     End Sub
 
     ''' <summary>
@@ -282,6 +285,7 @@ Public Class Form1
 
     Private Sub DrawingPictureBox_MouseMove(sender As Object, e As MouseEventArgs) Handles DrawingPictureBox.MouseMove,
                                                                                            DrawingPictureBox.MouseDown
+        Me.CoordinatesLabel.Text = $"{e.X}, {e.Y}"
         Static oldX As Integer
         Static oldY As Integer
         Select Case True
@@ -321,4 +325,5 @@ Public Class Form1
                                                                                     DrawWaveformsToolStripMenuItem.Click
         DrawAllWaveForms()
     End Sub
+
 End Class
