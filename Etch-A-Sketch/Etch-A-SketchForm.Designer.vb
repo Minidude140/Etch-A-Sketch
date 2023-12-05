@@ -269,8 +269,8 @@ Partial Class Form1
         Me.ButtonGroupBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ButtonGroupBox.AutoSize = True
-        Me.ButtonGroupBox.Controls.Add(Me.DrawWaveformsButton)
         Me.ButtonGroupBox.Controls.Add(Me.CoordinatesLabel)
+        Me.ButtonGroupBox.Controls.Add(Me.DrawWaveformsButton)
         Me.ButtonGroupBox.Controls.Add(Me.SelectColorButton)
         Me.ButtonGroupBox.Controls.Add(Me.ClearButton)
         Me.ButtonGroupBox.Controls.Add(Me.ExitButton)
@@ -284,12 +284,12 @@ Partial Class Form1
         '
         Me.CoordinatesLabel.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CoordinatesLabel.AutoSize = True
-        Me.CoordinatesLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CoordinatesLabel.Location = New System.Drawing.Point(665, 25)
+        Me.CoordinatesLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CoordinatesLabel.Location = New System.Drawing.Point(665, 28)
         Me.CoordinatesLabel.Name = "CoordinatesLabel"
-        Me.CoordinatesLabel.Size = New System.Drawing.Size(46, 24)
+        Me.CoordinatesLabel.Size = New System.Drawing.Size(45, 20)
         Me.CoordinatesLabel.TabIndex = 7
-        Me.CoordinatesLabel.Text = "(x,y)"
+        Me.CoordinatesLabel.Text = "(X,Y)"
         '
         'Form1
         '

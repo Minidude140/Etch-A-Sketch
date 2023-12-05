@@ -285,7 +285,9 @@ Public Class Form1
 
     Private Sub DrawingPictureBox_MouseMove(sender As Object, e As MouseEventArgs) Handles DrawingPictureBox.MouseMove,
                                                                                            DrawingPictureBox.MouseDown
+        'Update Co-ordinates Label
         Me.CoordinatesLabel.Text = $"{e.X}, {e.Y}"
+
         Static oldX As Integer
         Static oldY As Integer
         Select Case True
@@ -303,6 +305,11 @@ Public Class Form1
         'update old mouse points with current
         oldX = e.X
         oldY = e.Y
+    End Sub
+
+    Private Sub DrawingPictureBox_MouseLeave(sender As Object, e As EventArgs) Handles DrawingPictureBox.MouseLeave
+        'Return Co-ordinates Label to default
+        Me.CoordinatesLabel.Text = "(X,Y)"
     End Sub
 
     Private Sub DrawingPictureBox_MouseWheel(sender As Object, e As MouseEventArgs) Handles DrawingPictureBox.MouseWheel
