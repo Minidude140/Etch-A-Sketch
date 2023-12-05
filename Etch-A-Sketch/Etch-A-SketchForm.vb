@@ -23,12 +23,13 @@ Option Strict On
 '{~}Draw 10x10 Graticule (Black)
 '{~}set default background color and change pen color before drawing each wave type
 
+Imports System.Threading
 Public Class Form1
     Public foreGroundColor As Color
     Public backgroundColor As Color
     Dim penSize As Integer
 
-    'Private _foregroundColor As Color
+    ' Private _foregroundColor As Color
     'Public Property foregroundcolor() As Color
     '    Get
     '        Return _foregroundColor
@@ -57,12 +58,12 @@ Public Class Form1
     ''' </summary>
     Sub SetDefaults()
         'Erase the screen
-        DrawingPictureBox.Refresh()
+        'DrawingPictureBox.Refresh()
         'Change pen color to black
         Me.foregroundColor = Color.Black
         'Change background color to "Blanched Almond"
-        Me.backgroundColor = Color.BlanchedAlmond
-        DrawingPictureBox.BackColor = Me.backgroundColor
+        'Me.backgroundColor = Color.BlanchedAlmond
+        'DrawingPictureBox.BackColor = Me.backgroundColor
         'Set default pen size
         Me.penSize = 2
     End Sub
@@ -92,15 +93,17 @@ Public Class Form1
     ''' </summary>
     ''' <param name="newColor"></param>
     ''' <param name="changePenColor"></param>
-    Sub ChangeColor(newColor As Color, Optional changePenColor As Boolean = True)
+    Public Sub ChangeColor(newColor As Color, Optional changePenColor As Boolean = True)
         If changePenColor = True Then
             'change pen color
             'penColor.set = newColor
-            Me.foregroundColor = newColor
+            Me.foreGroundColor = newColor
         Else
             'change background color
             Me.backgroundColor = newColor
             DrawingPictureBox.BackColor = newColor
+            DrawingPictureBox.Refresh()
+            ' System.Threading.Thread.Sleep(1000)
         End If
     End Sub
 
@@ -220,9 +223,9 @@ Public Class Form1
     ''' </summary>
     Sub DrawAllWaveForms()
         'set background color
-        DrawingPictureBox.BackColor = Color.BlanchedAlmond
+        ChangeColor(Color.BlanchedAlmond, False)
         'Draw black graticule
-        foregroundColor = Color.Black
+        foreGroundColor = Color.Black
         DrawGratilules()
         'return to default pen size
         penSize = 2
