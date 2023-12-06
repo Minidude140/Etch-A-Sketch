@@ -85,11 +85,11 @@
     <Compile Include="ColorSelectForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Etch-A-SketchForm.vb">
+    <Compile Include="Etch_A_SketchForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Etch-A-SketchForm.Designer.vb">
-      <DependentUpon>Etch-A-SketchForm.vb</DependentUpon>
+    <Compile Include="Etch_A_SketchForm.Designer.vb">
+      <DependentUpon>Etch_A_SketchForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -115,8 +115,8 @@
     <EmbeddedResource Include="ColorSelectForm.resx">
       <DependentUpon>ColorSelectForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Etch-A-SketchForm.resx">
-      <DependentUpon>Etch-A-SketchForm.vb</DependentUpon>
+    <EmbeddedResource Include="Etch_A_SketchForm.resx">
+      <DependentUpon>Etch_A_SketchForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
