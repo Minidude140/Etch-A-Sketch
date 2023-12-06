@@ -24,7 +24,7 @@ Option Strict On
 '{~}set default background color and change pen color before drawing each wave type
 
 Imports System.Threading
-Public Class Form1
+Public Class EtchASketchForm
     Public foreGroundColor As Color
     Public backgroundColor As Color
     Dim penSize As Integer
@@ -38,7 +38,7 @@ Public Class Form1
         'Erase the screen
         DrawingPictureBox.Refresh()
         'Change pen color to black
-        Me.foregroundColor = Color.Black
+        Me.foreGroundColor = Color.Black
         'Change background color to "Blanched Almond"
         Me.backgroundColor = Color.BlanchedAlmond
         ChangeColor(backgroundColor, False)
@@ -57,7 +57,7 @@ Public Class Form1
         'initialize graphics object and set drawing surface to picture box
         Dim g As Graphics = DrawingPictureBox.CreateGraphics
         'initialize pen as color black
-        Dim pen As New Pen(Me.foregroundColor, Me.penSize)
+        Dim pen As New Pen(Me.foreGroundColor, Me.penSize)
         'draws a line from given co-ordinates (x,y) to (x,y); (0,0) in upper left hand corner
         g.DrawLine(pen, x1, y1, x2, y2)
         'dispose of the pen and graphics object to clear memory
@@ -214,16 +214,16 @@ Public Class Form1
         'return to default pen size
         penSize = 2
         'Draw Red Sin Wave
-        foregroundColor = Color.Red
+        foreGroundColor = Color.Red
         DrawSinWave()
         'Draw Blue Cos Wave
-        foregroundColor = Color.Blue
+        foreGroundColor = Color.Blue
         DrawCosWave()
         'Draw Green Tan Wave 
-        foregroundColor = Color.Green
+        foreGroundColor = Color.Green
         DrawTanWave()
         'Return pen to default color
-        foregroundColor = Color.Black
+        foreGroundColor = Color.Black
     End Sub
 
     ''' <summary>
